@@ -42,3 +42,40 @@ Migrating to CreateUsers (20211021200309)
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "6c25e4fd5c020c8814b6281ed70ec3d88c6310cc"], ["created_at", "2021-10-21 20:05:10.675240"], ["updated_at", "2021-10-21 20:05:10.675240"]]
   [1m[36mTRANSACTION (56.0ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/signup" for 127.0.0.1 at 2021-10-27 12:27:42 +0100
+  [1m[35m (45.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"ash", "email"=>"ash@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"email"=>"ash@email.com"}}
+[31mUnpermitted parameter: :user[0m
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 54.3ms | Allocations: 5643)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'name' for User.):
+  
+app/controllers/users_controller.rb:6:in `create'
+Started POST "/signup" for 127.0.0.1 at 2021-10-27 12:28:32 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"ash", "email"=>"ash@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"ash", "email"=>"ash@email.com"}}
+[31mUnpermitted parameters: :username, :user[0m
+Completed 422 Unprocessable Entity in 313ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2221)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-10-27 12:30:13 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"ash", "email"=>"ash@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"ash", "email"=>"ash@email.com"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Create (55.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "ash"], ["email", "ash@email.com"], ["password_digest", "$2a$12$j9mKWGby2ewIg90TJSfoiOpZKtTYuYmOAKLePE5AA2cr2ZF1CaigG"], ["created_at", "2021-10-27 11:30:14.441178"], ["updated_at", "2021-10-27 11:30:14.441178"]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (35.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ash@email.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ash@email.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1050ms (Views: 0.3ms | ActiveRecord: 99.9ms | Allocations: 9157)
+
+
