@@ -142,3 +142,504 @@ Migrating to RemovepagesLeftFromMeaurement (20211027125614)
   [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(2755398852210322395)[0m
   [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2755398852210322395)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddCreatedByToMeaurement (20211027135659)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (21.6ms)[0m  [1m[35mALTER TABLE "meaurements" ADD "created_by" character varying[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2755398852210322395)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2755398852210322395)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(2755398852210322395)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2755398852210322395)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddCreatedByToMeasurements (20211027140019)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "measurements" ADD "created_by" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211027140019"]]
+  [1m[36mTRANSACTION (43.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2755398852210322395)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2755398852210322395)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeDataTypeForPagesRead (20211027141314)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.6ms)[0m  [1m[35mALTER TABLE "measurements" ALTER COLUMN "pages_read" TYPE character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211027141314"]]
+  [1m[36mTRANSACTION (20.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2755398852210322395)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2755398852210322395)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(2755398852210322395)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/signup" for 127.0.0.1 at 2021-10-28 16:55:08 +0100
+  [1m[35m (25.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"ash", "email"=>"ash@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"email"=>"ash@email.com"}}
+[31mUnpermitted parameters: :name, :user[0m
+Completed 422 Unprocessable Entity in 349ms (Views: 0.2ms | ActiveRecord: 35.9ms | Allocations: 7259)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-10-28 16:55:34 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"che", "email"=>"che.blancoo58@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"che", "email"=>"che.blancoo58@gmail.com"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Create (31.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "che"], ["email", "che.blancoo58@gmail.com"], ["password_digest", "$2a$12$i3rWDmRpQzN2U6wv6r5I.ejqqk6acMzIjq.fOl22SN72jS.GzZ4si"], ["created_at", "2021-10-28 15:55:34.637649"], ["updated_at", "2021-10-28 15:55:34.637649"]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (18.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "che.blancoo58@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "che.blancoo58@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 990ms (Views: 0.2ms | ActiveRecord: 51.2ms | Allocations: 3715)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/auth/login" for 127.0.0.1 at 2021-10-28 17:01:25 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"che.blancoo58@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"che.blancoo58@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :authentication[0m
+[31mUnpermitted parameter: :authentication[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "che.blancoo58@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "che.blancoo58@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 200 OK in 661ms (Views: 0.3ms | ActiveRecord: 7.9ms | Allocations: 3199)
+
+
+Started POST "/users/1/measurments" for 127.0.0.1 at 2021-10-28 17:03:53 +0100
+Processing by MeasurmentsController#create as HTML
+  Parameters: {"pages_read"=>"20", "user_id"=>"1", "measurment"=>{"pages_read"=>"20"}}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 190)
+
+
+Started POST "/users/1/measurments" for 127.0.0.1 at 2021-10-28 17:04:24 +0100
+Processing by MeasurmentsController#create as HTML
+  Parameters: {"pages_read"=>"20", "Authorization"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzU1MjMyODV9.FnaVHThRhlZt1yPyjrlDoLzbD_M5HUvhPAGr-r-sEvI", "user_id"=>"1", "measurment"=>{"pages_read"=>"20", "Authorization"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzU1MjMyODV9.FnaVHThRhlZt1yPyjrlDoLzbD_M5HUvhPAGr-r-sEvI"}}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 88)
+
+
+Started POST "/users/1/measurments" for 127.0.0.1 at 2021-10-28 17:05:07 +0100
+Processing by MeasurmentsController#create as HTML
+  Parameters: {"pages_read"=>"20", "user_id"=>"1", "measurment"=>{"pages_read"=>"20"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameters: :user_id, :measurment[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+  [1m[36mMeasurement Create (43.5ms)[0m  [1m[32mINSERT INTO "measurements" ("pages_read", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["pages_read", "20"], ["user_id", 1], ["created_at", "2021-10-28 16:05:07.941063"], ["updated_at", "2021-10-28 16:05:07.941063"]]
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (15.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+Completed 201 Created in 141ms (Views: 1.1ms | ActiveRecord: 71.4ms | Allocations: 10225)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMeasurement Load (0.9ms)[0m  [1m[34mSELECT "measurements".* FROM "measurements" WHERE "measurements"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mMeasurement Load (0.8ms)[0m  [1m[34mSELECT "measurements".* FROM "measurements"[0m
+Started POST "/users/1/measurments" for 127.0.0.1 at 2021-10-28 17:12:49 +0100
+Processing by MeasurmentsController#create as HTML
+  Parameters: {"pages_read"=>"25", "user_id"=>"1", "measurment"=>{"pages_read"=>"25"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :measurment[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+  [1m[36mMeasurement Create (2.3ms)[0m  [1m[32mINSERT INTO "measurements" ("pages_read", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["pages_read", "25"], ["user_id", 1], ["created_at", "2021-10-28 16:12:49.929109"], ["updated_at", "2021-10-28 16:12:49.929109"]]
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (17.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+Completed 201 Created in 113ms (Views: 11.4ms | ActiveRecord: 29.1ms | Allocations: 11590)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (35.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (5039.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bookstudytraker_development"[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (926.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bookstudytraker_development"[0m
+  [1m[35m (266.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bookstudytraker_test"[0m
+  [1m[35m (1246.3ms)[0m  [1m[35mCREATE DATABASE "bookstudytraker_development" ENCODING = 'unicode'[0m
+  [1m[35m (828.6ms)[0m  [1m[35mCREATE DATABASE "bookstudytraker_test" ENCODING = 'unicode'[0m
+  [1m[35m (122.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (140.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2755398852210322395)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20211021200309)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (106.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211021200309"]]
+  [1m[36mTRANSACTION (8.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateMeasurements (20211027122947)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (98.9ms)[0m  [1m[35mCREATE TABLE "measurements" ("id" bigserial primary key, "pages_read" character varying, "percent_left" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_b199c8b9fc"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (29.4ms)[0m  [1m[35mCREATE INDEX "index_measurements_on_user_id" ON "measurements" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211027122947"]]
+  [1m[36mTRANSACTION (29.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to ChangeDataTypeForPagesRead (20211027141314)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "measurements" ALTER COLUMN "pages_read" TYPE character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211027141314"]]
+  [1m[36mTRANSACTION (23.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-10-28 16:40:15.828389"], ["updated_at", "2021-10-28 16:40:15.828389"]]
+  [1m[36mTRANSACTION (7.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2755398852210322395)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/signup" for 127.0.0.1 at 2021-10-28 17:42:50 +0100
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"ash", "email"=>"che.blancoo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"email"=>"che.blancoo@gmail.com"}}
+[31mUnpermitted parameters: :name, :user[0m
+Completed 422 Unprocessable Entity in 333ms (Views: 0.2ms | ActiveRecord: 8.5ms | Allocations: 7259)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-10-28 17:43:04 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"ash", "email"=>"che.blancoo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"ash", "email"=>"che.blancoo@gmail.com"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "ash"], ["email", "che.blancoo@gmail.com"], ["password_digest", "$2a$12$oOVx5Sklevqifvh3S.OL4OFg08ExpuREVaXRNPYngcC32XH/ScS/e"], ["created_at", "2021-10-28 16:43:05.240929"], ["updated_at", "2021-10-28 16:43:05.240929"]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (27.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "che.blancoo@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "che.blancoo@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 977ms (Views: 0.2ms | ActiveRecord: 30.2ms | Allocations: 3718)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-10-28 17:45:08 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"che.blancoo58@gmail.com", "password"=>"[FILTERED]", "Authoriization"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzU1MjU3ODV9.1DvuaQS2fpzHrUq6QySSZDvOSaWMwJ7-mNCLhR5HeC0", "authentication"=>{"email"=>"che.blancoo58@gmail.com", "password"=>"[FILTERED]", "Authoriization"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzU1MjU3ODV9.1DvuaQS2fpzHrUq6QySSZDvOSaWMwJ7-mNCLhR5HeC0"}}
+[31mUnpermitted parameters: :Authoriization, :authentication[0m
+[31mUnpermitted parameters: :Authoriization, :authentication[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "che.blancoo58@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 5ms (Views: 0.4ms | ActiveRecord: 0.7ms | Allocations: 676)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-10-28 17:45:34 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"che.blancoo@gmail.com", "password"=>"[FILTERED]", "Authoriization"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzU1MjU3ODV9.1DvuaQS2fpzHrUq6QySSZDvOSaWMwJ7-mNCLhR5HeC0", "authentication"=>{"email"=>"che.blancoo@gmail.com", "password"=>"[FILTERED]", "Authoriization"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzU1MjU3ODV9.1DvuaQS2fpzHrUq6QySSZDvOSaWMwJ7-mNCLhR5HeC0"}}
+[31mUnpermitted parameters: :Authoriization, :authentication[0m
+[31mUnpermitted parameters: :Authoriization, :authentication[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "che.blancoo@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "che.blancoo@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 200 OK in 623ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 1132)
+
+
+Started POST "/users/:1/measurements" for 127.0.0.1 at 2021-10-28 17:46:59 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/users/:1/measurements"):
+  
+Started POST "/users/:1/measurements" for 127.0.0.1 at 2021-10-28 17:47:25 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/users/:1/measurements"):
+  
+Started POST "/users/:1/measurements" for 127.0.0.1 at 2021-10-28 17:48:01 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/users/:1/measurements"):
+  
+Started POST "/users/1/measurements" for 127.0.0.1 at 2021-10-28 17:48:24 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/users/1/measurements"):
+  
+Started POST "/users/:1/measurements" for 127.0.0.1 at 2021-10-28 17:48:52 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/users/:1/measurements"):
+  
+Started POST "/users/1/measurements" for 127.0.0.1 at 2021-10-28 17:49:36 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/users/1/measurements"):
+  
+Started POST "/users/1/measurements" for 127.0.0.1 at 2021-10-28 17:52:42 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/users/1/measurements"):
+  
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/users/:1/measurements" for 127.0.0.1 at 2021-10-28 17:54:04 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/users/:1/measurements"):
+  
+Started POST "/users/:1/measurements" for 127.0.0.1 at 2021-10-28 17:55:35 +0100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/users/:1/measurements"):
+  
+Started POST "/users/1/measurements" for 127.0.0.1 at 2021-10-28 17:58:29 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/users/1/measurements"):
+  
+Started POST "/todos" for 127.0.0.1 at 2021-10-28 17:59:36 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/todos"):
+  
+Started POST "/users/1/measurements" for 127.0.0.1 at 2021-10-28 18:00:33 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/users/1/measurements"):
+  
+Started POST "/auth/login" for 127.0.0.1 at 2021-10-28 18:03:54 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"che.blancoo@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"che.blancoo@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :authentication[0m
+[31mUnpermitted parameter: :authentication[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "che.blancoo@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "che.blancoo@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 200 OK in 657ms (Views: 0.2ms | ActiveRecord: 18.8ms | Allocations: 8373)
+
+
+Started POST "/users/1/measurements" for 127.0.0.1 at 2021-10-28 18:05:11 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/users/1/measurements"):
+  
+Started POST "/users/1/measurments" for 127.0.0.1 at 2021-10-28 18:08:51 +0100
+Processing by MeasurmentsController#create as HTML
+  Parameters: {"pages_read"=>"20", "user_id"=>"1", "measurment"=>{"pages_read"=>"20"}}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 271)
+
+
+Started POST "/users/:1/measurments" for 127.0.0.1 at 2021-10-28 18:09:35 +0100
+Processing by MeasurmentsController#create as HTML
+  Parameters: {"pages_read"=>"20", "user_id"=>":1", "measurment"=>{"pages_read"=>"20"}}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.3ms | Allocations: 156)
+
+
+  [1m[36mMeasurement Load (1.4ms)[0m  [1m[34mSELECT "measurements".* FROM "measurements"[0m
+Started POST "/users/1/measurments" for 127.0.0.1 at 2021-10-28 18:12:45 +0100
+Processing by MeasurmentsController#create as HTML
+  Parameters: {"pages_read"=>"20", "user_id"=>"1", "measurment"=>{"pages_read"=>"20"}}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | Allocations: 156)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-10-28 18:13:13 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"che.blancoo@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"che.blancoo@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :authentication[0m
+[31mUnpermitted parameter: :authentication[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "che.blancoo@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "che.blancoo@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 200 OK in 633ms (Views: 0.2ms | ActiveRecord: 8.6ms | Allocations: 3145)
+
+
+Started POST "/users/1/measurments" for 127.0.0.1 at 2021-10-28 18:13:38 +0100
+Processing by MeasurmentsController#create as HTML
+  Parameters: {"pages_read"=>"20", "user_id"=>"1", "measurment"=>{"pages_read"=>"20"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :measurment[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+  [1m[36mMeasurement Create (1.2ms)[0m  [1m[32mINSERT INTO "measurements" ("pages_read", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["pages_read", "20"], ["user_id", 1], ["created_at", "2021-10-28 17:13:38.514579"], ["updated_at", "2021-10-28 17:13:38.514579"]]
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (10.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+Completed 201 Created in 57ms (Views: 1.1ms | ActiveRecord: 17.0ms | Allocations: 9443)
+
+
+  [1m[36mMeasurement Load (0.9ms)[0m  [1m[34mSELECT "measurements".* FROM "measurements"[0m
+Started POST "/users/1/measurments" for 127.0.0.1 at 2021-10-28 18:17:06 +0100
+Processing by MeasurmentsController#create as HTML
+  Parameters: {"pages_read"=>"25", "user_id"=>"1", "measurment"=>{"pages_read"=>"25"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :measurment[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+  [1m[36mMeasurement Create (1.0ms)[0m  [1m[32mINSERT INTO "measurements" ("pages_read", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["pages_read", "25"], ["user_id", 1], ["created_at", "2021-10-28 17:17:06.285524"], ["updated_at", "2021-10-28 17:17:06.285524"]]
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (14.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+Completed 201 Created in 56ms (Views: 0.6ms | ActiveRecord: 26.6ms | Allocations: 9297)
+
+
+Started POST "/users/1/measurments" for 127.0.0.1 at 2021-10-28 18:17:58 +0100
+Processing by MeasurmentsController#create as HTML
+  Parameters: {"pages_read"=>"30", "user_id"=>"1", "measurment"=>{"pages_read"=>"30"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :measurment[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+  [1m[36mMeasurement Create (0.8ms)[0m  [1m[32mINSERT INTO "measurements" ("pages_read", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["pages_read", "30"], ["user_id", 1], ["created_at", "2021-10-28 17:17:58.803089"], ["updated_at", "2021-10-28 17:17:58.803089"]]
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (15.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+Completed 201 Created in 54ms (Views: 1.2ms | ActiveRecord: 27.2ms | Allocations: 9304)
+
+
+Started POST "/users/1/measurments" for 127.0.0.1 at 2021-10-28 18:21:43 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MeasurmentsController#create as HTML
+  Parameters: {"pages_read"=>"31", "user_id"=>"1", "measurment"=>{"pages_read"=>"31"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :measurment[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+  [1m[36mMeasurement Create (1.4ms)[0m  [1m[32mINSERT INTO "measurements" ("pages_read", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["pages_read", "31"], ["user_id", 1], ["created_at", "2021-10-28 17:21:44.127828"], ["updated_at", "2021-10-28 17:21:44.127828"]]
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (15.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+Completed 201 Created in 74ms (Views: 1.0ms | ActiveRecord: 31.3ms | Allocations: 15736)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2755398852210322395)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCategories (20211028173651)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (108.4ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211028173651"]]
+  [1m[36mTRANSACTION (14.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(2755398852210322395)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/todos" for 127.0.0.1 at 2021-10-28 20:43:00 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/todos"):
+  
+Started GET "/categories" for 127.0.0.1 at 2021-10-28 20:43:38 +0100
+Processing by CategoriesController#index as */*
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 343)
+
+
+Started GET "/categories" for 127.0.0.1 at 2021-10-28 20:44:14 +0100
+Processing by CategoriesController#index as */*
+Completed 422 Unprocessable Entity in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 160)
+
+
+Started GET "/categories" for 127.0.0.1 at 2021-10-28 20:45:52 +0100
+Processing by CategoriesController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategorie Load (12.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 40ms (Views: 3.2ms | ActiveRecord: 13.9ms | Allocations: 5983)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2755398852210322395)[0m
+  [1m[35m (21.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBooks (20211031074608)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (616.3ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "name" character varying, "author" character varying, "isbn" character varying, "number_of_pages" integer, "category_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_1e86d9c4ec"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[35m (62.1ms)[0m  [1m[35mCREATE INDEX "index_books_on_category_id" ON "books" ("category_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211031074608"]]
+  [1m[36mTRANSACTION (21.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (31.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(2755398852210322395)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2755398852210322395)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddBookReferencesToMeasurement (20211031082159)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (138.5ms)[0m  [1m[35mALTER TABLE "measurements" ADD "book_id" bigint NOT NULL[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(2755398852210322395)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2755398852210322395)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddBookReferencesToMeasurement (20211031082159)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "measurements" ADD "book_id" bigint NOT NULL[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2755398852210322395)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (1181.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bookstudytraker_development"[0m
+  [1m[35m (886.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bookstudytraker_test"[0m
+  [1m[35m (1149.7ms)[0m  [1m[35mCREATE DATABASE "bookstudytraker_development" ENCODING = 'unicode'[0m
+  [1m[35m (837.2ms)[0m  [1m[35mCREATE DATABASE "bookstudytraker_test" ENCODING = 'unicode'[0m
+  [1m[35m (119.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (108.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2755398852210322395)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20211021200309)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (114.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211021200309"]]
+  [1m[36mTRANSACTION (20.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateMeasurements (20211027122947)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (106.1ms)[0m  [1m[35mCREATE TABLE "measurements" ("id" bigserial primary key, "pages_read" character varying, "percent_left" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_b199c8b9fc"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (38.9ms)[0m  [1m[35mCREATE INDEX "index_measurements_on_user_id" ON "measurements" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211027122947"]]
+  [1m[36mTRANSACTION (14.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to ChangeDataTypeForPagesRead (20211027141314)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (32.8ms)[0m  [1m[35mALTER TABLE "measurements" ALTER COLUMN "pages_read" TYPE character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211027141314"]]
+  [1m[36mTRANSACTION (13.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCategories (20211028173651)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (120.2ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211028173651"]]
+  [1m[36mTRANSACTION (14.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBooks (20211031074608)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (75.5ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "name" character varying, "author" character varying, "isbn" character varying, "number_of_pages" integer, "category_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_1e86d9c4ec"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[35m (30.5ms)[0m  [1m[35mCREATE INDEX "index_books_on_category_id" ON "books" ("category_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211031074608"]]
+  [1m[36mTRANSACTION (31.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddBookReferencesToMeasurement (20211031083853)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "measurements" ADD "book_id" bigint NOT NULL[0m
+  [1m[35m (38.7ms)[0m  [1m[35mCREATE INDEX "index_measurements_on_book_id" ON "measurements" ("book_id")[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "measurements" ADD CONSTRAINT "fk_rails_85b1ddff32"
+FOREIGN KEY ("book_id")
+  REFERENCES "books" ("id")
+[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211031083853"]]
+  [1m[36mTRANSACTION (20.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-10-31 08:39:41.541567"], ["updated_at", "2021-10-31 08:39:41.541567"]]
+  [1m[36mTRANSACTION (11.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(2755398852210322395)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
