@@ -1,4 +1,4 @@
-module v1
+module V1
   class BooksController < ApplicationController
     def create
       @book = Book.create!(books_params)

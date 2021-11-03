@@ -55,32 +55,5 @@ end
                end
           end
           
-  end       # [...]
-  #     end
-  #     context 'when the request is invalid' do
-  #       let(:invalid_attributes) { { pages_read: nil }.to_json }
-  #       before { post "/users/#{2}/measurements", params: invalid_attributes, headers: headers }
-  #     end
-  #     it 'returns status code 422' do
-  #       expect(response).to have_http_status(422)
-  #     end
-
-  #   it 'returns a validation failure message' do
-  #     expect(json['message'])
-  #       .to match(/Validation failed: Pages_read can't be blank/)
-  #   end
-  # end
-  # describe 'PUT /measurements/:id' do
-  #   let(:valid_attributes) { { pages_read: 20 }.to_json }
-  
-  #   context 'when the record exists' do
-  #     before { put "/measurements/#{measurement_id}", params: valid_attributes, headers: headers }
-  #     # [...]
-  #   end
-  # end
-  # describe 'DELETE /measurements/:id' do
-  #   before { delete "/measurements/#{measurement_id}", params: {}, headers: headers }
-  #   # [...]
-    
-  # end
+  end     
 end
