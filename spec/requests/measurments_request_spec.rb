@@ -29,14 +29,21 @@ end
     end
   end
    end
-  #  describe 'POST /measurements' do
-  #    let(:valid_attributes) do
-  # #       # send json payload
-  #      { pages_read: 10,user_id: 2,book_id: book.id }.to_json
-  #    end
-  #    context 'when request is valid' do
-  #      before { post "/measurements", params: valid_attributes, headers: headers }
-  #      # [...]
+   describe 'POST /measurments' do
+     let(:valid_attributes) do
+  #       # send json payload
+       { pages_read: 10,user_id: 2,book_id: book.id }.to_json
+     end
+    context 'when request is valid' do
+       before { post "/measurments", params: valid_attributes, headers: headers }
+       it 'creates a measurement' do
+        expect(json['pages_read']).to eq(10)
+      end
+      it 'returns status code 201' do
+        expect(response).to have_http_status(201)
+      end
+    end
+  end       # [...]
   #     end
   #     context 'when the request is invalid' do
   #       let(:invalid_attributes) { { pages_read: nil }.to_json }
