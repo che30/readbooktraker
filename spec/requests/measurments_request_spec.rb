@@ -43,6 +43,18 @@ end
         expect(response).to have_http_status(201)
       end
     end
+    context 'when the request is invalid' do
+            let(:invalid_attributes) { { pages_read: nil }.to_json }
+            before { post "/measurments", params: invalid_attributes, headers: headers }
+            it 'returns status code 422' do
+              expect(response).to have_http_status(422)
+            end
+            it 'returns a validation failure message' do
+                 expect(json['message'])
+                   .to match(/Validation failed: Book must exist, Pages read can't be blank/)
+               end
+          end
+          
   end       # [...]
   #     end
   #     context 'when the request is invalid' do
