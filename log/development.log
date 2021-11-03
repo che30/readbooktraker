@@ -643,3 +643,2158 @@ FOREIGN KEY ("book_id")
   [1m[36mTRANSACTION (11.4ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(2755398852210322395)[0m
   [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+email { "foo@bar.com" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /home/che/Desktop/final capstones/readbooktraker/spec/factories/users.rb:5)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+password { "foobar" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /home/che/Desktop/final capstones/readbooktraker/spec/factories/users.rb:6)
+Started POST "/signup" for 127.0.0.1 at 2021-11-01 06:48:24 +0100
+  [1m[35m (33.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"blanco", "email"=>"userone@gmail.com", "password"=>"[FILTERED]", "password_digest"=>"[FILTERED]", "user"=>{"username"=>"blanco", "email"=>"userone@gmail.com", "password_digest"=>"[FILTERED]"}}
+[31mUnpermitted parameters: :password_digest, :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Create (34.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "blanco"], ["email", "userone@gmail.com"], ["password_digest", "$2a$12$FxKc7Zsy.Ivm58aqTsoTSun8zgU0CVysTcADflSpdPlpUCaMzYCWy"], ["created_at", "2021-11-01 05:48:26.742430"], ["updated_at", "2021-11-01 05:48:26.742430"]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (9.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "userone@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "userone@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1125ms (Views: 0.3ms | ActiveRecord: 174.8ms | Allocations: 8899)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/auth/login" for 127.0.0.1 at 2021-11-01 06:59:05 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"userone@gmail", "password"=>"[FILTERED]", "authentication"=>{"email"=>"userone@gmail", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :authentication[0m
+[31mUnpermitted parameter: :authentication[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "userone@gmail"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 19ms (Views: 0.4ms | ActiveRecord: 6.3ms | Allocations: 2730)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-11-01 06:59:26 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"userone@gmail", "password"=>"[FILTERED]", "authentication"=>{"email"=>"userone@gmail", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :authentication[0m
+[31mUnpermitted parameter: :authentication[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "userone@gmail"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 19ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 646)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-11-01 06:59:46 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"userone@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"userone@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :authentication[0m
+[31mUnpermitted parameter: :authentication[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "userone@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "userone@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 200 OK in 611ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1128)
+
+
+Started GET "/categories" for 127.0.0.1 at 2021-11-01 07:01:59 +0100
+Processing by CategoriesController#index as */*
+  [1m[36mCategorie Load (18.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 39ms (Views: 3.8ms | ActiveRecord: 18.0ms | Allocations: 844)
+
+
+Started POST "/categories" for 127.0.0.1 at 2021-11-01 07:04:10 +0100
+Processing by CategoriesController#create as HTML
+  Parameters: {"name"=>"Dune", "category"=>{"name"=>"Dune"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 0.8ms | Allocations: 4168)
+
+
+  
+NoMethodError (undefined method `categories' for #<User:0x0000555fdaace420>):
+  
+app/controllers/categories_controller.rb:8:in `create'
+Started POST "/categories" for 127.0.0.1 at 2021-11-01 07:05:39 +0100
+Processing by CategoriesController#create as HTML
+  Parameters: {"name"=>"Dune", "category"=>{"name"=>"Dune"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 10.0ms | Allocations: 6227)
+
+
+  
+NameError (uninitialized constant CategoriesController::Categories):
+  
+app/controllers/categories_controller.rb:8:in `create'
+Started POST "/categories" for 127.0.0.1 at 2021-11-01 07:07:00 +0100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#create as HTML
+  Parameters: {"name"=>"Dune", "category"=>{"name"=>"Dune"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :category[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/categories_controller.rb:8:in `create'
+  [1m[36mCategorie Create (17.8ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Dune"], ["created_at", "2021-11-01 06:07:00.628512"], ["updated_at", "2021-11-01 06:07:00.628512"]]
+  ↳ app/controllers/categories_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (14.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/categories_controller.rb:8:in `create'
+Completed 201 Created in 82ms (Views: 1.6ms | ActiveRecord: 46.8ms | Allocations: 12093)
+
+
+Started GET "/categories" for 127.0.0.1 at 2021-11-01 07:07:17 +0100
+Processing by CategoriesController#index as */*
+  [1m[36mCategorie Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 726)
+
+
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 07:13:13 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameters: :category_id, :book[0m
+Completed 422 Unprocessable Entity in 145ms (Views: 0.2ms | ActiveRecord: 11.4ms | Allocations: 6370)
+
+
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 07:13:33 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameters: :category_id, :book[0m
+Completed 422 Unprocessable Entity in 11ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 1325)
+
+
+Started POST "/categories/:1/books" for 127.0.0.1 at 2021-11-01 07:14:22 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>":1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameters: :category_id, :book[0m
+Completed 422 Unprocessable Entity in 11ms (Views: 1.8ms | ActiveRecord: 0.7ms | Allocations: 1326)
+
+
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 07:17:09 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameters: :category_id, :book[0m
+Completed 422 Unprocessable Entity in 9ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 1302)
+
+
+  [1m[36mCategorie Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Started GET "/categories/:category_id/books" for 127.0.0.1 at 2021-11-01 07:19:42 +0100
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for BooksController
+Did you mean?  json_response
+               create
+               current_user):
+  
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/categories/1/books" for 127.0.0.1 at 2021-11-01 07:20:14 +0100
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for BooksController
+Did you mean?  json_response
+               create
+               current_user):
+  
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/categories/1/books" for 127.0.0.1 at 2021-11-01 07:20:31 +0100
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for BooksController
+Did you mean?  json_response
+               create
+               current_user):
+  
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/categories/1/books" for 127.0.0.1 at 2021-11-01 07:25:23 +0100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as */*
+  Parameters: {"category_id"=>"1"}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 393)
+
+
+Started GET "/categories/1/books" for 127.0.0.1 at 2021-11-01 07:25:48 +0100
+Processing by BooksController#index as */*
+  Parameters: {"category_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mBook Load (16.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 62ms (Views: 2.1ms | ActiveRecord: 22.6ms | Allocations: 10277)
+
+
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 07:26:26 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameters: :category_id, :book[0m
+Completed 422 Unprocessable Entity in 37ms (Views: 0.2ms | ActiveRecord: 5.7ms | Allocations: 7658)
+
+
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 07:27:06 +0100
+Processing by BooksController#create as */*
+  Parameters: {"category_id"=>"1"}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 91)
+
+
+Started GET "/categories/1/books" for 127.0.0.1 at 2021-11-01 07:27:15 +0100
+Processing by BooksController#index as */*
+  Parameters: {"category_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 6ms (Views: 1.6ms | ActiveRecord: 1.4ms | Allocations: 1162)
+
+
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 07:30:10 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :book[0m
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 13.8ms | Allocations: 7274)
+
+
+  
+NameError (uninitialized constant Book::Category):
+  
+app/controllers/books_controller.rb:7:in `create'
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 07:30:43 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :book[0m
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 11.8ms | Allocations: 7316)
+
+
+  
+NameError (uninitialized constant Book::Category):
+  
+app/controllers/books_controller.rb:7:in `create'
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 07:36:59 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :book[0m
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 7.6ms | Allocations: 7091)
+
+
+  
+NameError (uninitialized constant Book::Category):
+  
+app/controllers/books_controller.rb:3:in `create'
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 07:41:24 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :book[0m
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 20.1ms | Allocations: 7321)
+
+
+  
+NameError (uninitialized constant Book::Category):
+  
+app/controllers/books_controller.rb:3:in `create'
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 07:42:35 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :book[0m
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 15.3ms | Allocations: 11576)
+
+
+  
+NameError (uninitialized constant Book::Category):
+  
+app/controllers/books_controller.rb:3:in `create'
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 07:44:28 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 8.7ms | Allocations: 6019)
+
+
+  
+NameError (uninitialized constant BooksController::Books):
+  
+app/controllers/books_controller.rb:3:in `create'
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 07:47:19 +0100
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 10.6ms | Allocations: 10924)
+
+
+  
+NoMethodError (undefined method `books' for #<Class:0x0000557770174228>):
+  
+app/controllers/books_controller.rb:3:in `create'
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 07:54:51 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 6.3ms | Allocations: 5805)
+
+
+  
+NameError (uninitialized constant BooksController::Category
+Did you mean?  Categorie):
+  
+app/controllers/books_controller.rb:9:in `set_book'
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 07:55:21 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategorie Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:9:in `set_book'
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 21.7ms | Allocations: 8396)
+
+
+  
+NoMethodError (undefined method `books' for #<Categorie:0x00007f96381d69a8>):
+  
+app/controllers/books_controller.rb:4:in `create'
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 08:00:03 +0100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategorie Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:9:in `set_book'
+[31mUnpermitted parameter: :book[0m
+Completed 500 Internal Server Error in 103ms (ActiveRecord: 19.1ms | Allocations: 15279)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'categorie_id' for Book.):
+  
+app/controllers/books_controller.rb:4:in `create'
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 08:00:52 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :book[0m
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 12.0ms | Allocations: 7681)
+
+
+  
+NameError (uninitialized constant Book::Category):
+  
+app/controllers/books_controller.rb:3:in `create'
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 08:01:57 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :book[0m
+Completed 422 Unprocessable Entity in 29ms (Views: 0.2ms | ActiveRecord: 8.0ms | Allocations: 9582)
+
+
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 08:02:49 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameters: :category_id, :book[0m
+Completed 422 Unprocessable Entity in 31ms (Views: 0.2ms | ActiveRecord: 11.2ms | Allocations: 8357)
+
+
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 08:03:25 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameters: :category_id, :book[0m
+Completed 422 Unprocessable Entity in 33ms (Views: 0.2ms | ActiveRecord: 8.2ms | Allocations: 8357)
+
+
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 08:04:07 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :book[0m
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 10.7ms | Allocations: 7278)
+
+
+  
+NameError (uninitialized constant Book::Category):
+  
+app/controllers/books_controller.rb:3:in `create'
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 08:05:08 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameters: :category_id, :book[0m
+Completed 422 Unprocessable Entity in 32ms (Views: 0.2ms | ActiveRecord: 9.5ms | Allocations: 8400)
+
+
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 08:05:53 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :book[0m
+Completed 422 Unprocessable Entity in 30ms (Views: 0.2ms | ActiveRecord: 11.2ms | Allocations: 8346)
+
+
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 08:06:27 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :book[0m
+Completed 422 Unprocessable Entity in 36ms (Views: 0.2ms | ActiveRecord: 11.3ms | Allocations: 8347)
+
+
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 08:07:33 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :book[0m
+Completed 422 Unprocessable Entity in 31ms (Views: 0.2ms | ActiveRecord: 13.4ms | Allocations: 8358)
+
+
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 08:08:56 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :book[0m
+Completed 422 Unprocessable Entity in 33ms (Views: 0.2ms | ActiveRecord: 12.2ms | Allocations: 8427)
+
+
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 08:09:54 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :book[0m
+Completed 422 Unprocessable Entity in 33ms (Views: 0.2ms | ActiveRecord: 9.8ms | Allocations: 8389)
+
+
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 08:11:44 +0100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameters: :category_id, :book[0m
+Completed 422 Unprocessable Entity in 43ms (Views: 0.2ms | ActiveRecord: 16.5ms | Allocations: 13926)
+
+
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 08:12:23 +0100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :book[0m
+Completed 422 Unprocessable Entity in 48ms (Views: 0.7ms | ActiveRecord: 13.4ms | Allocations: 13921)
+
+
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 08:17:55 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategorie Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:9:in `set_book'
+[31mUnpermitted parameter: :book[0m
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 17.9ms | Allocations: 11349)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'categorie_id' for Book.):
+  
+app/controllers/books_controller.rb:4:in `create'
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 08:19:22 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategorie Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:9:in `set_book'
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 16.3ms | Allocations: 7943)
+
+
+  
+NoMethodError (undefined method `books' for 1:Integer):
+  
+app/controllers/books_controller.rb:4:in `create'
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 08:26:47 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 53.0ms | Allocations: 5718)
+
+
+  
+NoMethodError (undefined method `set_book' for #<BooksController:0x0000000000ccd8>):
+  
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:105:in `run_callbacks'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:165:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 08:27:03 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 10.8ms | Allocations: 7217)
+
+
+  
+NoMethodError (undefined method `permit' for #<Class:0x00007f5f0c7861e0>):
+  
+app/controllers/books_controller.rb:3:in `create'
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 08:27:48 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 5.4ms | Allocations: 7236)
+
+
+  
+NoMethodError (undefined method `params' for #<Class:0x00007f5f0074a548>):
+  
+app/controllers/books_controller.rb:3:in `create'
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 08:30:30 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :book[0m
+Completed 422 Unprocessable Entity in 37ms (Views: 0.2ms | ActiveRecord: 11.5ms | Allocations: 8376)
+
+
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 08:30:51 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :book[0m
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 12.4ms | Allocations: 7257)
+
+
+  
+NameError (uninitialized constant Book::Category):
+  
+app/controllers/books_controller.rb:3:in `create'
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 08:32:55 +0100
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :book[0m
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 13.2ms | Allocations: 11576)
+
+
+  
+NameError (uninitialized constant Book::Category):
+  
+app/controllers/books_controller.rb:3:in `create'
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 08:34:59 +0100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :book[0m
+Completed 422 Unprocessable Entity in 104ms (Views: 0.2ms | ActiveRecord: 11.3ms | Allocations: 13921)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-11-01 08:36:05 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"oneuser@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"oneuser@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :authentication[0m
+[31mUnpermitted parameter: :authentication[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "oneuser@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 27ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 922)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-11-01 08:36:39 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"oneuser@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"oneuser@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :authentication[0m
+[31mUnpermitted parameter: :authentication[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "oneuser@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 4ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 646)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/auth/login" for 127.0.0.1 at 2021-11-01 08:37:37 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"userone@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"userone@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :authentication[0m
+[31mUnpermitted parameter: :authentication[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "userone@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "userone@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 200 OK in 624ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 1135)
+
+
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 08:38:26 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :book[0m
+Completed 422 Unprocessable Entity in 7ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 1332)
+
+
+  [1m[36mCategorie Load (1.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCategorie Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCategorie Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (58.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (687.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bookstudytraker_development"[0m
+  [1m[35m (345.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bookstudytraker_test"[0m
+  [1m[35m (1085.6ms)[0m  [1m[35mCREATE DATABASE "bookstudytraker_development" ENCODING = 'unicode'[0m
+  [1m[35m (769.5ms)[0m  [1m[35mCREATE DATABASE "bookstudytraker_test" ENCODING = 'unicode'[0m
+  [1m[35m (176.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (95.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2755398852210322395)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20211021200309)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (93.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211021200309"]]
+  [1m[36mTRANSACTION (16.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateMeasurements (20211027122947)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (92.5ms)[0m  [1m[35mCREATE TABLE "measurements" ("id" bigserial primary key, "pages_read" character varying, "percent_left" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_b199c8b9fc"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (48.4ms)[0m  [1m[35mCREATE INDEX "index_measurements_on_user_id" ON "measurements" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211027122947"]]
+  [1m[36mTRANSACTION (22.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to ChangeDataTypeForPagesRead (20211027141314)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "measurements" ALTER COLUMN "pages_read" TYPE character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211027141314"]]
+  [1m[36mTRANSACTION (11.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCategories (20211028173651)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (95.1ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211028173651"]]
+  [1m[36mTRANSACTION (20.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBooks (20211031074608)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (117.9ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "name" character varying, "author" character varying, "isbn" character varying, "number_of_pages" integer, "category_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_1e86d9c4ec"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[35m (39.8ms)[0m  [1m[35mCREATE INDEX "index_books_on_category_id" ON "books" ("category_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211031074608"]]
+  [1m[36mTRANSACTION (20.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddBookReferencesToMeasurement (20211031083853)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "measurements" ADD "book_id" bigint NOT NULL[0m
+  [1m[35m (54.4ms)[0m  [1m[35mCREATE INDEX "index_measurements_on_book_id" ON "measurements" ("book_id")[0m
+  [1m[35m (3.5ms)[0m  [1m[35mALTER TABLE "measurements" ADD CONSTRAINT "fk_rails_85b1ddff32"
+FOREIGN KEY ("book_id")
+  REFERENCES "books" ("id")
+[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211031083853"]]
+  [1m[36mTRANSACTION (14.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-11-01 07:49:30.107044"], ["updated_at", "2021-11-01 07:49:30.107044"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(2755398852210322395)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2755398852210322395)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBooks (20211101075341)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "name" character varying, "author" character varying, "isbn" character varying, "number_of_pages" integer, "category_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_1e86d9c4ec"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2755398852210322395)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2755398852210322395)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBooks (20211101075341)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "name" character varying, "author" character varying, "isbn" character varying, "number_of_pages" integer, "category_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_1e86d9c4ec"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2755398852210322395)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (275.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bookstudytraker_development"[0m
+  [1m[35m (269.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bookstudytraker_test"[0m
+  [1m[35m (935.5ms)[0m  [1m[35mCREATE DATABASE "bookstudytraker_development" ENCODING = 'unicode'[0m
+  [1m[35m (844.7ms)[0m  [1m[35mCREATE DATABASE "bookstudytraker_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories" CASCADE[0m
+  [1m[35m (131.4ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (107.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (120.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (13.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211031083853)[0m
+  [1m[35m (8.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20211021200309),
+(20211028173651);
+
+[0m
+  [1m[35m (97.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (16.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-11-01 07:59:21.412485"], ["updated_at", "2021-11-01 07:59:21.412485"]]
+  [1m[36mTRANSACTION (25.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "df7efb56a98730a1a13dbdeffcf95a8bfcf41550"], ["created_at", "2021-11-01 07:59:21.468668"], ["updated_at", "2021-11-01 07:59:21.468668"]]
+  [1m[36mTRANSACTION (8.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories" CASCADE[0m
+  [1m[35m (105.0ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (96.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (95.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (12.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211031083853)[0m
+  [1m[35m (9.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20211021200309),
+(20211028173651);
+
+[0m
+  [1m[35m (85.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-11-01 07:59:21.946327"], ["updated_at", "2021-11-01 07:59:21.946327"]]
+  [1m[36mTRANSACTION (7.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-11-01 07:59:21.969587"], ["key", "environment"]]
+  [1m[36mTRANSACTION (8.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "df7efb56a98730a1a13dbdeffcf95a8bfcf41550"], ["created_at", "2021-11-01 07:59:21.990080"], ["updated_at", "2021-11-01 07:59:21.990080"]]
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2755398852210322395)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBooks (20211101075341)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (98.9ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "name" character varying, "author" character varying, "isbn" character varying, "number_of_pages" integer, "category_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_1e86d9c4ec"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[35m (49.1ms)[0m  [1m[35mCREATE INDEX "index_books_on_category_id" ON "books" ("category_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211101075341"]]
+  [1m[36mTRANSACTION (18.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateMeasurements (20211101075452)
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (89.5ms)[0m  [1m[35mCREATE TABLE "measurements" ("id" bigserial primary key, "pages_read" integer, "percent_left" character varying, "user_id" bigint NOT NULL, "book_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_b199c8b9fc"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_85b1ddff32"
+FOREIGN KEY ("book_id")
+  REFERENCES "books" ("id")
+)[0m
+  [1m[35m (42.7ms)[0m  [1m[35mCREATE INDEX "index_measurements_on_user_id" ON "measurements" ("user_id")[0m
+  [1m[35m (42.9ms)[0m  [1m[35mCREATE INDEX "index_measurements_on_book_id" ON "measurements" ("book_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211101075452"]]
+  [1m[36mTRANSACTION (22.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(2755398852210322395)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/signup" for 127.0.0.1 at 2021-11-01 09:00:39 +0100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"blanco", "email"=>"userone@gmail.com", "password"=>"[FILTERED]", "password_digest"=>"[FILTERED]", "user"=>{"username"=>"blanco", "email"=>"userone@gmail.com", "password_digest"=>"[FILTERED]"}}
+[31mUnpermitted parameters: :password_digest, :user[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Create (2.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "blanco"], ["email", "userone@gmail.com"], ["password_digest", "$2a$12$20FbIvEAxuQfCg3vW88v0e/jcrPOqRSDxRBCUNVREiER.nhlKAeeS"], ["created_at", "2021-11-01 08:00:40.025993"], ["updated_at", "2021-11-01 08:00:40.025993"]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (25.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "userone@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "userone@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1005ms (Views: 0.3ms | ActiveRecord: 36.7ms | Allocations: 8896)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-11-01 09:01:39 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"userone@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"userone@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :authentication[0m
+[31mUnpermitted parameter: :authentication[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "userone@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "userone@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 200 OK in 614ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 1167)
+
+
+Started GET "/categories" for 127.0.0.1 at 2021-11-01 09:02:17 +0100
+Processing by CategoriesController#index as */*
+  [1m[36mCategorie Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 7ms (Views: 2.9ms | ActiveRecord: 1.4ms | Allocations: 1363)
+
+
+Started GET "/categories" for 127.0.0.1 at 2021-11-01 09:02:55 +0100
+Processing by CategoriesController#index as */*
+Completed 422 Unprocessable Entity in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 326)
+
+
+Started GET "/categories" for 127.0.0.1 at 2021-11-01 09:03:10 +0100
+Processing by CategoriesController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategorie Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 46ms (Views: 4.0ms | ActiveRecord: 11.7ms | Allocations: 5361)
+
+
+Started POST "/categories" for 127.0.0.1 at 2021-11-01 09:04:48 +0100
+Processing by CategoriesController#create as HTML
+  Parameters: {"name"=>"Romance", "category"=>{"name"=>"Romance"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :category[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/categories_controller.rb:8:in `create'
+  [1m[36mCategorie Create (1.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Romance"], ["created_at", "2021-11-01 08:04:48.200158"], ["updated_at", "2021-11-01 08:04:48.200158"]]
+  ↳ app/controllers/categories_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (15.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/categories_controller.rb:8:in `create'
+Completed 201 Created in 48ms (Views: 0.5ms | ActiveRecord: 20.7ms | Allocations: 4141)
+
+
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 09:05:49 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameters: :isbn, :number_of_pages, :book[0m
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 7.1ms | Allocations: 4558)
+
+
+  
+NameError (uninitialized constant Book::Category):
+  
+app/controllers/books_controller.rb:3:in `create'
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 09:06:27 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :book[0m
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 12.9ms | Allocations: 7293)
+
+
+  
+NameError (uninitialized constant Book::Category):
+  
+app/controllers/books_controller.rb:3:in `create'
+  [1m[36mCategorie Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCategorie Load (1.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCategorie Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/books" for 127.0.0.1 at 2021-11-01 09:11:51 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :book[0m
+Completed 422 Unprocessable Entity in 25ms (Views: 0.2ms | ActiveRecord: 7.6ms | Allocations: 8720)
+
+
+Started POST "/books" for 127.0.0.1 at 2021-11-01 09:12:20 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :book[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.6ms | Allocations: 867)
+
+
+  
+NameError (uninitialized constant Book::Category):
+  
+app/controllers/books_controller.rb:3:in `create'
+Started POST "/books" for 127.0.0.1 at 2021-11-01 09:12:26 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :book[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.7ms | Allocations: 862)
+
+
+  
+NameError (uninitialized constant Book::Category):
+  
+app/controllers/books_controller.rb:3:in `create'
+Started POST "/books" for 127.0.0.1 at 2021-11-01 09:12:38 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :book[0m
+Completed 422 Unprocessable Entity in 8ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 1285)
+
+
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 09:21:22 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :book[0m
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 7.4ms | Allocations: 7065)
+
+
+  
+NameError (uninitialized constant Book::Category):
+  
+app/controllers/books_controller.rb:3:in `create'
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 09:23:37 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameters: :category_id, :book[0m
+Completed 422 Unprocessable Entity in 31ms (Views: 0.2ms | ActiveRecord: 15.7ms | Allocations: 7747)
+
+
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mMeasurement Load (1.2ms)[0m  [1m[34mSELECT "measurements".* FROM "measurements" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/categories/1/books" for 127.0.0.1 at 2021-11-01 09:32:02 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100", "category_id"=>"1", "book"=>{"name"=>"crown of thorns author=blanko", "isbn"=>"1a2b", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameters: :category_id, :book[0m
+Completed 422 Unprocessable Entity in 23ms (Views: 0.2ms | ActiveRecord: 9.0ms | Allocations: 7501)
+
+
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (231.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bookstudytraker_development"[0m
+  [1m[35m (267.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bookstudytraker_test"[0m
+  [1m[35m (1156.8ms)[0m  [1m[35mCREATE DATABASE "bookstudytraker_development" ENCODING = 'unicode'[0m
+  [1m[35m (807.9ms)[0m  [1m[35mCREATE DATABASE "bookstudytraker_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "books" CASCADE[0m
+  [1m[35m (148.8ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "name" character varying, "author" character varying, "isbn" character varying, "number_of_pages" integer, "category_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (52.6ms)[0m  [1m[35mCREATE INDEX "index_books_on_category_id" ON "books" ("category_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories" CASCADE[0m
+  [1m[35m (106.4ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "measurements" CASCADE[0m
+  [1m[35m (116.9ms)[0m  [1m[35mCREATE TABLE "measurements" ("id" bigserial primary key, "pages_read" integer, "percent_left" character varying, "user_id" bigint NOT NULL, "book_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (62.5ms)[0m  [1m[35mCREATE INDEX "index_measurements_on_book_id" ON "measurements" ("book_id")[0m
+  [1m[35m (75.4ms)[0m  [1m[35mCREATE INDEX "index_measurements_on_user_id" ON "measurements" ("user_id")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (91.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (5.7ms)[0m  [1m[35mALTER TABLE "books" ADD CONSTRAINT "fk_rails_1e86d9c4ec"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+[0m
+  [1m[35m (9.2ms)[0m  [1m[35mALTER TABLE "measurements" ADD CONSTRAINT "fk_rails_85b1ddff32"
+FOREIGN KEY ("book_id")
+  REFERENCES "books" ("id")
+[0m
+  [1m[35m (8.3ms)[0m  [1m[35mALTER TABLE "measurements" ADD CONSTRAINT "fk_rails_b199c8b9fc"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (119.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211101075452)[0m
+  [1m[35m (9.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20211021200309);
+
+[0m
+  [1m[35m (105.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-11-01 08:38:03.566819"], ["updated_at", "2021-11-01 08:38:03.566819"]]
+  [1m[36mTRANSACTION (9.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "d253fff0ffe4210e131f850dd2a70cf3ae762cb7"], ["created_at", "2021-11-01 08:38:03.605496"], ["updated_at", "2021-11-01 08:38:03.605496"]]
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "books" CASCADE[0m
+  [1m[35m (96.6ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "name" character varying, "author" character varying, "isbn" character varying, "number_of_pages" integer, "category_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (64.0ms)[0m  [1m[35mCREATE INDEX "index_books_on_category_id" ON "books" ("category_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories" CASCADE[0m
+  [1m[35m (89.5ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "measurements" CASCADE[0m
+  [1m[35m (110.6ms)[0m  [1m[35mCREATE TABLE "measurements" ("id" bigserial primary key, "pages_read" integer, "percent_left" character varying, "user_id" bigint NOT NULL, "book_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (60.9ms)[0m  [1m[35mCREATE INDEX "index_measurements_on_book_id" ON "measurements" ("book_id")[0m
+  [1m[35m (49.9ms)[0m  [1m[35mCREATE INDEX "index_measurements_on_user_id" ON "measurements" ("user_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (114.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (14.9ms)[0m  [1m[35mALTER TABLE "books" ADD CONSTRAINT "fk_rails_1e86d9c4ec"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+[0m
+  [1m[35m (6.2ms)[0m  [1m[35mALTER TABLE "measurements" ADD CONSTRAINT "fk_rails_85b1ddff32"
+FOREIGN KEY ("book_id")
+  REFERENCES "books" ("id")
+[0m
+  [1m[35m (6.9ms)[0m  [1m[35mALTER TABLE "measurements" ADD CONSTRAINT "fk_rails_b199c8b9fc"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (116.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (8.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211101075452)[0m
+  [1m[35m (6.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20211021200309);
+
+[0m
+  [1m[35m (109.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-11-01 08:38:04.620672"], ["updated_at", "2021-11-01 08:38:04.620672"]]
+  [1m[36mTRANSACTION (8.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-11-01 08:38:04.640108"], ["key", "environment"]]
+  [1m[36mTRANSACTION (11.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "d253fff0ffe4210e131f850dd2a70cf3ae762cb7"], ["created_at", "2021-11-01 08:38:04.664242"], ["updated_at", "2021-11-01 08:38:04.664242"]]
+  [1m[36mTRANSACTION (8.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2755398852210322395)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCats (20211101084013)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (89.7ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211101084013"]]
+  [1m[36mTRANSACTION (23.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBooks (20211101084151)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "name" character varying, "author" character varying, "isbn" character varying, "number_of_pages" character varying, "cat_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_ff77da0e36"
+FOREIGN KEY ("cat_id")
+  REFERENCES "cats" ("id")
+)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2755398852210322395)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (318.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bookstudytraker_development"[0m
+  [1m[35m (280.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bookstudytraker_test"[0m
+  [1m[35m (888.2ms)[0m  [1m[35mCREATE DATABASE "bookstudytraker_development" ENCODING = 'unicode'[0m
+  [1m[35m (853.7ms)[0m  [1m[35mCREATE DATABASE "bookstudytraker_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (119.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "books" ADD CONSTRAINT "fk_rails_1e86d9c4ec"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+[0m
+  [1m[35m (322.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bookstudytraker_development"[0m
+  [1m[35m (278.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bookstudytraker_test"[0m
+  [1m[35m (850.2ms)[0m  [1m[35mCREATE DATABASE "bookstudytraker_development" ENCODING = 'unicode'[0m
+  [1m[35m (873.3ms)[0m  [1m[35mCREATE DATABASE "bookstudytraker_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (134.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "measurements" ADD CONSTRAINT "fk_rails_85b1ddff32"
+FOREIGN KEY ("book_id")
+  REFERENCES "books" ("id")
+[0m
+  [1m[35m (332.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bookstudytraker_development"[0m
+  [1m[35m (269.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bookstudytraker_test"[0m
+  [1m[35m (800.0ms)[0m  [1m[35mCREATE DATABASE "bookstudytraker_development" ENCODING = 'unicode'[0m
+  [1m[35m (831.2ms)[0m  [1m[35mCREATE DATABASE "bookstudytraker_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (115.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "measurements" ADD CONSTRAINT "fk_rails_85b1ddff32"
+FOREIGN KEY ("book_id")
+  REFERENCES "books" ("id")
+[0m
+  [1m[35m (276.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bookstudytraker_development"[0m
+  [1m[35m (283.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bookstudytraker_test"[0m
+  [1m[35m (1061.0ms)[0m  [1m[35mCREATE DATABASE "bookstudytraker_development" ENCODING = 'unicode'[0m
+  [1m[35m (906.0ms)[0m  [1m[35mCREATE DATABASE "bookstudytraker_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (96.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "measurements" ADD CONSTRAINT "fk_rails_b199c8b9fc"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (330.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bookstudytraker_development"[0m
+  [1m[35m (293.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bookstudytraker_test"[0m
+  [1m[35m (769.4ms)[0m  [1m[35mCREATE DATABASE "bookstudytraker_development" ENCODING = 'unicode'[0m
+  [1m[35m (797.0ms)[0m  [1m[35mCREATE DATABASE "bookstudytraker_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (95.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (120.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (7.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211101075452)[0m
+  [1m[35m (9.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20211021200309);
+
+[0m
+  [1m[35m (97.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-11-01 08:45:37.075755"], ["updated_at", "2021-11-01 08:45:37.075755"]]
+  [1m[36mTRANSACTION (13.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "f6984c985bbb10d0cf65cac1bfea0a90a9649c38"], ["created_at", "2021-11-01 08:45:37.107274"], ["updated_at", "2021-11-01 08:45:37.107274"]]
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (108.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (103.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (4.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211101075452)[0m
+  [1m[35m (5.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20211021200309);
+
+[0m
+  [1m[35m (85.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-11-01 08:45:37.485568"], ["updated_at", "2021-11-01 08:45:37.485568"]]
+  [1m[36mTRANSACTION (12.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.8ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-11-01 08:45:37.520601"], ["key", "environment"]]
+  [1m[36mTRANSACTION (11.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "f6984c985bbb10d0cf65cac1bfea0a90a9649c38"], ["created_at", "2021-11-01 08:45:37.553736"], ["updated_at", "2021-11-01 08:45:37.553736"]]
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2755398852210322395)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCats (20211101084013)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (99.0ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211101084013"]]
+  [1m[36mTRANSACTION (12.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBooks (20211101084151)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (117.0ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "name" character varying, "author" character varying, "isbn" character varying, "number_of_pages" character varying, "cat_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_ff77da0e36"
+FOREIGN KEY ("cat_id")
+  REFERENCES "cats" ("id")
+)[0m
+  [1m[35m (41.3ms)[0m  [1m[35mCREATE INDEX "index_books_on_cat_id" ON "books" ("cat_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211101084151"]]
+  [1m[36mTRANSACTION (18.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateMeasurements (20211101084329)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (125.5ms)[0m  [1m[35mCREATE TABLE "measurements" ("id" bigserial primary key, "pages_read" integer, "percent_left" character varying, "user_id" bigint NOT NULL, "book_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_b199c8b9fc"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_85b1ddff32"
+FOREIGN KEY ("book_id")
+  REFERENCES "books" ("id")
+)[0m
+  [1m[35m (50.2ms)[0m  [1m[35mCREATE INDEX "index_measurements_on_user_id" ON "measurements" ("user_id")[0m
+  [1m[35m (32.4ms)[0m  [1m[35mCREATE INDEX "index_measurements_on_book_id" ON "measurements" ("book_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211101084329"]]
+  [1m[36mTRANSACTION (22.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(2755398852210322395)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/signup" for 127.0.0.1 at 2021-11-01 09:51:59 +0100
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"test", "email"=>"one@user.com", "password"=>"[FILTERED]", "password_digest"=>"[FILTERED]", "user"=>{"username"=>"test", "email"=>"one@user.com", "password_digest"=>"[FILTERED]"}}
+[31mUnpermitted parameters: :password_digest, :user[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "test"], ["email", "one@user.com"], ["password_digest", "$2a$12$lQCwyIThv7myJ3Jdrpecr.4JbEiWUjyo.mRxcISHSgEcLy6mb7Vju"], ["created_at", "2021-11-01 08:51:59.665434"], ["updated_at", "2021-11-01 08:51:59.665434"]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (591.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "one@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "one@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1540ms (Views: 0.2ms | ActiveRecord: 604.2ms | Allocations: 8896)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-11-01 09:53:29 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"one@user.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"one@user.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :authentication[0m
+[31mUnpermitted parameter: :authentication[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "one@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "one@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 200 OK in 616ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 1158)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-11-01 09:53:59 +0100
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for CatsController
+Did you mean?  json_response
+               create
+               current_user):
+  
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/cats" for 127.0.0.1 at 2021-11-01 09:54:12 +0100
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for CatsController
+Did you mean?  json_response
+               create
+               current_user):
+  
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/cats" for 127.0.0.1 at 2021-11-01 09:55:02 +0100
+Processing by CatsController#index as */*
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCat Load (1.1ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 46ms (Views: 3.6ms | ActiveRecord: 11.9ms | Allocations: 5535)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-01 09:55:58 +0100
+Processing by CatsController#create as HTML
+  Parameters: {"name"=>"Romance", "cat"=>{"name"=>"Romance"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :cat[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:7:in `create'
+  [1m[36mCat Create (1.1ms)[0m  [1m[32mINSERT INTO "cats" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Romance"], ["created_at", "2021-11-01 08:55:58.672309"], ["updated_at", "2021-11-01 08:55:58.672309"]]
+  ↳ app/controllers/cats_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (20.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cats_controller.rb:7:in `create'
+Completed 200 OK in 44ms (Views: 0.7ms | ActiveRecord: 26.9ms | Allocations: 3844)
+
+
+Started POST "/cats/1/books" for 127.0.0.1 at 2021-11-01 09:58:05 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"book one", "author"=>"me", "isbn"=>"1212", "number_of_pages"=>"100", "cat_id"=>"1", "book"=>{"name"=>"book one", "author"=>"me", "isbn"=>"1212", "number_of_pages"=>"100"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameter: :book[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:3:in `create'
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:3:in `create'
+  [1m[36mBook Create (1.7ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "isbn", "number_of_pages", "cat_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "book one"], ["author", "me"], ["isbn", "1212"], ["number_of_pages", "100"], ["cat_id", 1], ["created_at", "2021-11-01 08:58:05.554366"], ["updated_at", "2021-11-01 08:58:05.554366"]]
+  ↳ app/controllers/books_controller.rb:3:in `create'
+  [1m[36mTRANSACTION (33.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:3:in `create'
+Completed 201 Created in 62ms (Views: 1.0ms | ActiveRecord: 41.1ms | Allocations: 7625)
+
+
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."cat_id" = $1[0m  [["cat_id", 1]]
+Started POST "/users/1/measurements" for 127.0.0.1 at 2021-11-01 10:23:26 +0100
+  
+ActionController::RoutingError (uninitialized constant MeasurementsController
+Did you mean?  MeasurmentsController):
+  
+Started POST "/users/1/measurements" for 127.0.0.1 at 2021-11-01 10:23:53 +0100
+  
+ActionController::RoutingError (uninitialized constant MeasurementsController
+Did you mean?  MeasurmentsController):
+  
+Started POST "/books/1/measurements" for 127.0.0.1 at 2021-11-01 10:32:20 +0100
+  
+ActionController::RoutingError (uninitialized constant MeasurementsController
+Did you mean?  MeasurmentsController):
+  
+Started POST "/boos/1/measurements" for 127.0.0.1 at 2021-11-01 10:35:00 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/boos/1/measurements"):
+  
+Started POST "/books/1/measurements" for 127.0.0.1 at 2021-11-01 10:35:42 +0100
+  
+ActionController::RoutingError (uninitialized constant MeasurementsController
+Did you mean?  MeasurmentsController):
+  
+Started POST "/books/1/measurements" for 127.0.0.1 at 2021-11-01 10:36:37 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant MeasurementsController
+Did you mean?  MeasurmentsController):
+  
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMeasurement Create (49.2ms)[0m  [1m[32mINSERT INTO "measurements" ("pages_read", "user_id", "book_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["pages_read", 10], ["user_id", 1], ["book_id", 1], ["created_at", "2021-11-01 11:32:32.742253"], ["updated_at", "2021-11-01 11:32:32.742253"]]
+  [1m[36mTRANSACTION (19.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMeasurement Load (1.0ms)[0m  [1m[34mSELECT "measurements".* FROM "measurements"[0m
+Started POST "/users/1/measurements/cats/1/books/1/measurements" for 127.0.0.1 at 2021-11-01 14:30:10 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/users/1/measurements/cats/1/books/1/measurements"):
+  
+Started POST "/users/1/measurements/cats/1/books/1/measurements" for 127.0.0.1 at 2021-11-01 14:31:32 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/users/1/measurements/cats/1/books/1/measurements"):
+  
+Started GET "/" for 127.0.0.1 at 2021-11-01 15:07:48 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/che/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/che/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 45.4ms | Allocations: 181)
+Completed 200 OK in 172ms (Views: 47.0ms | Allocations: 1952)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-11-01 15:07:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for 127.0.0.1 at 2021-11-01 23:24:13 +0100
+  [1m[35m (176.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/che/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/che/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 49.5ms | Allocations: 293)
+Completed 200 OK in 258ms (Views: 109.1ms | ActiveRecord: 0.0ms | Allocations: 2267)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-11-01 23:24:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/cats" for 127.0.0.1 at 2021-11-01 23:24:26 +0100
+Processing by CatsController#index as HTML
+Completed 422 Unprocessable Entity in 158ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 388)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-02 17:14:21 +0100
+  [1m[35m (16.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/che/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/che/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 40.6ms | Allocations: 293)
+Completed 200 OK in 151ms (Views: 66.8ms | ActiveRecord: 0.0ms | Allocations: 2267)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-11-02 17:14:56 +0100
+Processing by CatsController#index as */*
+Completed 422 Unprocessable Entity in 116ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 391)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-11-02 17:16:28 +0100
+Processing by CatsController#index as */*
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 232)
+
+
+  [1m[36mUser Load (450.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/auth/login%20email=one@user.com%20password=123" for 127.0.0.1 at 2021-11-02 17:18:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/auth/login%20email=one@user.com%20password=123"):
+  
+Started POST "/auth/login%20email=one@user.com%20password=123" for 127.0.0.1 at 2021-11-02 17:19:29 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/auth/login%20email=one@user.com%20password=123"):
+  
+Started POST "/auth/login%20" for 127.0.0.1 at 2021-11-02 17:21:03 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/auth/login%20"):
+  
+Started POST "/signup" for 127.0.0.1 at 2021-11-02 17:25:22 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"usertwo", "email"=>"two@user.com", "password"=>"[FILTERED]", "password_digest"=>"[FILTERED]", "user"=>{"username"=>"usertwo", "email"=>"two@user.com", "password_digest"=>"[FILTERED]"}}
+[31mUnpermitted parameters: :password_digest, :user[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Create (199.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "usertwo"], ["email", "two@user.com"], ["password_digest", "$2a$12$BavRZ1/JQ0931IVanmXztu7w1M1yLVCa/X0RHdkWs/yIeJAeUzesi"], ["created_at", "2021-11-02 16:25:22.756104"], ["updated_at", "2021-11-02 16:25:22.756104"]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (170.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "two@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "two@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1364ms (Views: 0.2ms | ActiveRecord: 385.5ms | Allocations: 6149)
+
+
+Started POST "/auth/login%20" for 127.0.0.1 at 2021-11-02 17:36:11 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/auth/login%20"):
+  
+Started POST "/auth/login%20" for 127.0.0.1 at 2021-11-02 17:46:51 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/auth/login%20"):
+  
+Started POST "/auth/login" for 127.0.0.1 at 2021-11-02 17:51:15 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"two@user.com", "authentication"=>{"email"=>"two@user.com"}}
+[31mUnpermitted parameter: :authentication[0m
+[31mUnpermitted parameter: :authentication[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "two@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 1132ms (Views: 32.7ms | ActiveRecord: 217.3ms | Allocations: 2760)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/auth/login" for 127.0.0.1 at 2021-11-02 17:52:39 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"two@user.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"two@user.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :authentication[0m
+[31mUnpermitted parameter: :authentication[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "two@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "two@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 200 OK in 626ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 1126)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-02 18:13:32 +0100
+  [1m[35m (120.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/che/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/che/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 40.3ms | Allocations: 293)
+Completed 200 OK in 350ms (Views: 122.1ms | ActiveRecord: 0.0ms | Allocations: 2268)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-11-02 18:13:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/signup%0A" for 127.0.0.1 at 2021-11-02 18:32:26 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/signup%0A"):
+  
+Started GET "/" for 127.0.0.1 at 2021-11-02 18:35:01 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/che/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/che/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 53.2ms | Allocations: 177)
+Completed 200 OK in 167ms (Views: 75.6ms | Allocations: 715)
+
+
+Started POST "/signup%0A" for 127.0.0.1 at 2021-11-02 18:35:45 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/signup%0A"):
+  
+Started POST "/signup%0A" for 127.0.0.1 at 2021-11-02 18:38:18 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/signup%0A"):
+  
+Started POST "/signup%0A" for 127.0.0.1 at 2021-11-02 18:39:06 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/signup%0A"):
+  
+Started POST "/signup%0A" for 127.0.0.1 at 2021-11-02 18:39:40 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/signup%0A"):
+  
+Started POST "/signup%0A" for ::1 at 2021-11-02 18:40:47 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/signup%0A"):
+  
+Started POST "/signup%20%0A" for ::1 at 2021-11-02 18:53:37 +0100
+  [1m[35m (12.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/signup%20%0A"):
+  
+Started GET "/" for ::1 at 2021-11-02 18:53:59 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/che/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/che/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 15.1ms | Allocations: 293)
+Completed 200 OK in 114ms (Views: 41.3ms | ActiveRecord: 0.0ms | Allocations: 2270)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-11-02 18:54:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/signup" for ::1 at 2021-11-02 18:54:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/signup"):
+  
+Started GET "/cats" for ::1 at 2021-11-02 18:55:23 +0100
+Processing by CatsController#index as HTML
+Completed 422 Unprocessable Entity in 116ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 383)
+
+
+Started GET "/signup" for ::1 at 2021-11-02 18:55:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/signup"):
+  
+Started POST "/users%20%0A" for ::1 at 2021-11-02 18:56:39 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/users%20%0A"):
+  
+Started POST "/signup%20%0A" for ::1 at 2021-11-02 19:00:24 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/signup%20%0A"):
+  
+Started POST "/signup%20%0A" for ::1 at 2021-11-03 06:57:01 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/signup%20%0A"):
+  
+Started POST "/signup%20%0A" for ::1 at 2021-11-03 07:01:23 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/signup%20%0A"):
+  
+Started POST "/cats%0A" for ::1 at 2021-11-03 07:03:31 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/cats%0A"):
+  
+Started GET "/cats" for ::1 at 2021-11-03 07:05:27 +0100
+Processing by CatsController#index as */*
+Completed 422 Unprocessable Entity in 1ms (Views: 0.3ms | Allocations: 91)
+
+
+Started GET "/signup" for ::1 at 2021-11-03 07:05:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/signup"):
+  
+Started GET "/signup" for ::1 at 2021-11-03 07:05:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/signup"):
+  
+Started POST "/signup" for ::1 at 2021-11-03 07:06:02 +0100
+Processing by UsersController#create as */*
+Completed 422 Unprocessable Entity in 859ms (Views: 0.2ms | ActiveRecord: 285.5ms | Allocations: 9998)
+
+
+Started POST "/signup" for ::1 at 2021-11-03 07:07:09 +0100
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"three", "email"=>"three@user.com", "password"=>"[FILTERED]", "password_digest"=>"[FILTERED]"}
+[31mUnpermitted parameter: :password_digest[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Create (369.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "three"], ["email", "three@user.com"], ["password_digest", "$2a$12$9PdGwInOJOH3V.fpR94yhuoNX8ETAaFtdsaUbxtaj21zdwVPCy4ye"], ["created_at", "2021-11-03 06:07:09.778753"], ["updated_at", "2021-11-03 06:07:09.778753"]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (62.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "three@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "three@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1643ms (Views: 0.4ms | ActiveRecord: 433.2ms | Allocations: 4852)
+
+
+Started POST "/auth/login" for ::1 at 2021-11-03 07:09:23 +0100
+Processing by AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"three@user.com", "password"=>"[FILTERED]", "Authorization"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2MzYwMDYwMzB9.3xmn-9jF53SxnmLvcTXh7Dr33hOEFYvX3PqEitWohsw"}
+[31mUnpermitted parameter: :Authorization[0m
+[31mUnpermitted parameter: :Authorization[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "three@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "three@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 200 OK in 676ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1140)
+
+
+Started POST "/measurements" for ::1 at 2021-11-03 07:13:09 +0100
+  
+ActionController::RoutingError (uninitialized constant MeasurementsController
+Did you mean?  MeasurmentsController):
+  
+Started POST "/measurements" for ::1 at 2021-11-03 07:13:52 +0100
+  
+ActionController::RoutingError (uninitialized constant MeasurementsController
+Did you mean?  MeasurmentsController):
+  
+Started GET "/cats" for ::1 at 2021-11-03 07:14:37 +0100
+Processing by CatsController#index as */*
+  Parameters: {"Authorization"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2MzYwMDYxNjN9.EeHaCifI3bRlUVQy9-saxs6-xtLgNzNqvYKU0QWbR5E"}
+Completed 422 Unprocessable Entity in 0ms (Views: 0.2ms | Allocations: 89)
+
+
+Started GET "/cats" for ::1 at 2021-11-03 07:15:00 +0100
+Processing by CatsController#index as */*
+  Parameters: {"Authorization"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2MzYwMDYxNjN9.EeHaCifI3bRlUVQy9-saxs6-xtLgNzNqvYKU0QWbR5E"}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.3ms | Allocations: 89)
+
+
+Started POST "/auth/login" for ::1 at 2021-11-03 07:15:41 +0100
+Processing by AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"three@user.com", "password"=>"[FILTERED]", "Authorization"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2MzYwMDYwMzB9.3xmn-9jF53SxnmLvcTXh7Dr33hOEFYvX3PqEitWohsw"}
+[31mUnpermitted parameter: :Authorization[0m
+[31mUnpermitted parameter: :Authorization[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "three@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "three@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 200 OK in 687ms (Views: 0.3ms | ActiveRecord: 9.8ms | Allocations: 3165)
+
+
+Started GET "/cats" for ::1 at 2021-11-03 07:16:57 +0100
+Processing by CatsController#index as */*
+  Parameters: {"Authorization"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2MzYwMDY1NDF9.fqbQ3ojp2FwnM2N5fGfdjV51OSJQ0B26Pjx5gZHgjXU", "cat"=>{}}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.3ms | ActiveRecord: 5.9ms | Allocations: 89)
+
+
+Started GET "/cats" for ::1 at 2021-11-03 07:18:29 +0100
+Processing by CatsController#index as */*
+Completed 422 Unprocessable Entity in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 89)
+
+
+Started GET "/cats" for ::1 at 2021-11-03 07:21:19 +0100
+Processing by CatsController#index as */*
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 159)
+
+
+Started GET "/cats" for ::1 at 2021-11-03 07:21:33 +0100
+Processing by CatsController#index as */*
+Completed 422 Unprocessable Entity in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 157)
+
+
+Started GET "/cats" for ::1 at 2021-11-03 07:22:14 +0100
+Processing by CatsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCat Load (27.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 52ms (Views: 6.4ms | ActiveRecord: 31.9ms | Allocations: 2793)
+
+
+Started POST "/measurements" for ::1 at 2021-11-03 07:22:49 +0100
+  
+ActionController::RoutingError (uninitialized constant MeasurementsController
+Did you mean?  MeasurmentsController):
+  
+Started POST "/users/1/measurement" for ::1 at 2021-11-03 09:58:16 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/users/1/measurement"):
+  
+Started POST "/users/1/measurement?pages_read=10" for ::1 at 2021-11-03 10:00:22 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/users/1/measurement"):
+  
+Started POST "/users/1/measurement" for ::1 at 2021-11-03 10:01:57 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/users/1/measurement"):
+  
+Started POST "/users/1/measurements" for ::1 at 2021-11-03 10:03:03 +0100
+  
+ActionController::RoutingError (uninitialized constant MeasurementsController
+Did you mean?  MeasurmentsController):
+  
+Started POST "/measure" for ::1 at 2021-11-03 10:08:41 +0100
+  [1m[35m (20.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant MeasurementController
+Did you mean?  MeasurmentsController):
+  
+Started POST "/users/1/measurements" for 127.0.0.1 at 2021-11-03 10:13:38 +0100
+  
+ActionController::RoutingError (uninitialized constant MeasurementsController
+Did you mean?  MeasurmentsController):
+  
+Started POST "/measurments" for ::1 at 2021-11-03 10:15:26 +0100
+Processing by MeasurmentsController#create as */*
+  Parameters: {"pages_read"=>"24", "user_id"=>"1", "book_id"=>"1"}
+  [1m[36mUser Load (19.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+  [1m[36mBook Load (70.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+  [1m[36mMeasurement Create (102.7ms)[0m  [1m[32mINSERT INTO "measurements" ("pages_read", "user_id", "book_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["pages_read", 24], ["user_id", 1], ["book_id", 1], ["created_at", "2021-11-03 09:15:29.384834"], ["updated_at", "2021-11-03 09:15:29.384834"]]
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (106.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+Completed 201 Created in 1489ms (Views: 0.8ms | ActiveRecord: 414.9ms | Allocations: 21167)
+
+
+Started POST "/signup" for ::1 at 2021-11-03 10:32:01 +0100
+  [1m[35m (42.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"fourth@user.com", "usernmae"=>"fourth", "password"=>"[FILTERED]", "password_digest"=>"[FILTERED]"}
+[31mUnpermitted parameters: :usernmae, :password_digest[0m
+Completed 422 Unprocessable Entity in 551ms (Views: 0.3ms | ActiveRecord: 93.7ms | Allocations: 9255)
+
+
+Started POST "/signup" for ::1 at 2021-11-03 10:32:16 +0100
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"fourth@user.com", "username"=>"fourth", "password"=>"[FILTERED]", "password_digest"=>"[FILTERED]"}
+[31mUnpermitted parameter: :password_digest[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Create (82.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "fourth"], ["email", "fourth@user.com"], ["password_digest", "$2a$12$yYI8ZqvU37y0XIRSYQIQP.25UD.q6DAzhDcig87mgqJbV9IMJQsp."], ["created_at", "2021-11-03 09:32:17.264472"], ["updated_at", "2021-11-03 09:32:17.264472"]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (11.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "fourth@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "fourth@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1430ms (Views: 0.3ms | ActiveRecord: 95.1ms | Allocations: 3716)
+
+
+Started POST "/auth/login" for ::1 at 2021-11-03 10:33:37 +0100
+Processing by AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"fourth@user.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "fourth@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "fourth@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 200 OK in 671ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 1111)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/measurments" for ::1 at 2021-11-03 10:36:09 +0100
+Processing by MeasurmentsController#create as */*
+  Parameters: {"book_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+  [1m[36mBook Load (40.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+  [1m[36mMeasurement Create (59.9ms)[0m  [1m[32mINSERT INTO "measurements" ("user_id", "book_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 4], ["book_id", 1], ["created_at", "2021-11-03 09:36:10.113242"], ["updated_at", "2021-11-03 09:36:10.113242"]]
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (45.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+Completed 201 Created in 346ms (Views: 1.1ms | ActiveRecord: 161.0ms | Allocations: 13712)
+
+
+Started POST "/measurments" for ::1 at 2021-11-03 10:36:56 +0100
+Processing by MeasurmentsController#create as */*
+  Parameters: {"book_id"=>"1", "pages_read"=>"38"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+  [1m[36mMeasurement Create (1.0ms)[0m  [1m[32mINSERT INTO "measurements" ("pages_read", "user_id", "book_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["pages_read", 38], ["user_id", 4], ["book_id", 1], ["created_at", "2021-11-03 09:36:56.693363"], ["updated_at", "2021-11-03 09:36:56.693363"]]
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (10.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+Completed 201 Created in 30ms (Views: 0.4ms | ActiveRecord: 12.8ms | Allocations: 3569)
+
+
+Started POST "/measurments" for ::1 at 2021-11-03 10:37:06 +0100
+Processing by MeasurmentsController#create as */*
+  Parameters: {"pages_read"=>"38"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+Completed 422 Unprocessable Entity in 6ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1563)
+
+
+Started POST "/measurments" for ::1 at 2021-11-03 10:37:16 +0100
+Processing by MeasurmentsController#create as */*
+  Parameters: {"book_id"=>"1", "pages_read"=>"38"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+  [1m[36mMeasurement Create (0.8ms)[0m  [1m[32mINSERT INTO "measurements" ("pages_read", "user_id", "book_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["pages_read", 38], ["user_id", 4], ["book_id", 1], ["created_at", "2021-11-03 09:37:16.307808"], ["updated_at", "2021-11-03 09:37:16.307808"]]
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (173.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/measurments_controller.rb:7:in `create'
+Completed 201 Created in 202ms (Views: 1.3ms | ActiveRecord: 175.6ms | Allocations: 3566)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-11-03 10:38:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/auth/login" for 127.0.0.1 at 2021-11-03 11:03:48 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"fourth@user.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"fourth@user.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :authentication[0m
+[31mUnpermitted parameter: :authentication[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "fourth@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "fourth@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 200 OK in 657ms (Views: 0.2ms | ActiveRecord: 6.3ms | Allocations: 6666)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-11-03 11:05:48 +0100
+Processing by V1::CatsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCat Load (50.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 101ms (Views: 10.3ms | ActiveRecord: 59.7ms | Allocations: 3745)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-11-03 11:06:20 +0100
+Processing by V1::CatsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 7ms (Views: 1.9ms | ActiveRecord: 1.2ms | Allocations: 1232)
+
+
+Started POST "/cats" for ::1 at 2021-11-03 11:10:17 +0100
+Processing by V1::CatsController#create as */*
+  Parameters: {"book_id"=>"1", "pages_read"=>"38"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameters: :book_id, :pages_read[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/cats_controller.rb:8:in `create'
+  [1m[36mCat Create (20.8ms)[0m  [1m[32mINSERT INTO "cats" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-03 10:10:17.053359"], ["updated_at", "2021-11-03 10:10:17.053359"]]
+  ↳ app/controllers/v1/cats_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (18.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/cats_controller.rb:8:in `create'
+Completed 200 OK in 49ms (Views: 0.6ms | ActiveRecord: 40.3ms | Allocations: 2396)
+
+
+Started GET "/cats" for ::1 at 2021-11-03 11:10:38 +0100
+Processing by V1::CatsController#index as */*
+  Parameters: {"book_id"=>"1", "pages_read"=>"38"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.6ms | Allocations: 1285)
+
+
