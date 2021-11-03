@@ -2,17 +2,18 @@ require 'rails_helper'
 
 RSpec.describe 'cats API', type: :request do
   # initialize test data
-  let!(:cats) { create_list(:cat , 10) }
+  let!(:cats) { create_list(:cat, 10) }
 
   # Test suite for GET /cats
   describe 'GET /cats' do
-    # make HTTP get request before each example
-    before { get '/cats', 
-      headers:'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo4LCJleHAiOjE2MzYwMzc1NDh9.0oHj4pPwdajhoh8rKgJ7TmyHBYhsLHOwhyfseMwlsIU'  }
+    before do
+      get '/cats',
+          headers: 'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo4LCJleHAiOjE2MzYwMzc1NDh9.0oHj4pPwdajhoh8rKgJ7TmyHBYhsLHOwhyfseMwlsIU'
+    end
     it 'returns cats' do
       expect(json).not_to be_empty
       expect(json.size).to eq(10)
-  end
+    end
 
     it 'returns status code 200' do
       expect(response).to have_http_status(200)

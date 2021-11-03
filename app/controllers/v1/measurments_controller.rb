@@ -4,18 +4,21 @@ module V1
       @measurements = current_user.measurements
       json_response(@measurements)
     end
+
     def create
       @measurement = current_user.measurements.create!(measurement_params)
       json_response(@measurement, :created)
     end
+
     def show
       @measurement = Measurement.find(params[:id])
       json_response(@measurement)
     end
+
     private
+
     def measurement_params
-      params.permit(:pages_read,:book_id)
+      params.permit(:pages_read, :book_id)
     end
   end
-  
 end
