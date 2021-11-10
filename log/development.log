@@ -2807,3 +2807,230 @@ Started POST "/signup" for 127.0.0.1 at 2021-11-03 11:51:55 +0100
   
 ActionController::RoutingError (uninitialized constant UsersController):
   
+Started GET "/" for ::1 at 2021-11-03 20:56:51 +0100
+  [1m[35m (64.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/che/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/che/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 58.2ms | Allocations: 293)
+Completed 200 OK in 116ms (Views: 60.5ms | ActiveRecord: 0.0ms | Allocations: 2267)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-11-03 20:56:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/cats" for ::1 at 2021-11-03 20:56:58 +0100
+Processing by V1::CatsController#index as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 422 Unprocessable Entity in 37ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 914)
+
+
+Started GET "/" for ::1 at 2021-11-09 15:20:16 +0100
+  [1m[35m (117.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/che/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/che/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 49.3ms | Allocations: 293)
+Completed 200 OK in 315ms (Views: 108.7ms | ActiveRecord: 0.0ms | Allocations: 2268)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-11-09 15:20:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/signup" for ::1 at 2021-11-09 15:21:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/signup"):
+  
+Started GET "/auth/signup" for ::1 at 2021-11-09 15:21:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/auth/signup"):
+  
+Started GET "/signup" for ::1 at 2021-11-09 15:23:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/signup"):
+  
+  [1m[36mUser Load (1507.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started OPTIONS "/signup" for ::1 at 2021-11-09 16:25:13 +0100
+  [1m[35m (141.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/signup"):
+  
+Started OPTIONS "/signup" for ::1 at 2021-11-09 16:26:42 +0100
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/signup"):
+  
+Started GET "/" for ::1 at 2021-11-09 16:29:34 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/che/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/che/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 37.2ms | Allocations: 293)
+Completed 200 OK in 169ms (Views: 63.1ms | ActiveRecord: 0.0ms | Allocations: 2269)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-11-09 16:29:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/signup" for ::1 at 2021-11-09 16:29:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/signup"):
+  
+Started GET "/post/signup" for ::1 at 2021-11-09 16:32:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/post/signup"):
+  
+Started GET "/cats" for ::1 at 2021-11-09 16:33:30 +0100
+Processing by V1::CatsController#index as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 422 Unprocessable Entity in 56ms (Views: 9.0ms | Allocations: 834)
+
+
+Started GET "/measurements" for ::1 at 2021-11-09 16:34:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/measurements"):
+  
+Started GET "/measurments" for ::1 at 2021-11-09 16:34:36 +0100
+Processing by V1::MeasurmentsController#index as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 422 Unprocessable Entity in 1ms (Views: 0.5ms | Allocations: 167)
+
+
+Started GET "/" for ::1 at 2021-11-09 16:39:03 +0100
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/che/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/che/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.8ms | Allocations: 293)
+Completed 200 OK in 13ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 2267)
+
+
+Started OPTIONS "/signup" for ::1 at 2021-11-09 16:40:31 +0100
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/signup"):
+  
+Started POST "/" for 127.0.0.1 at 2021-11-09 16:47:50 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+Started POST "/signup" for 127.0.0.1 at 2021-11-09 16:50:22 +0100
+Processing by UsersController#create as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 422 Unprocessable Entity in 634ms (Views: 20.4ms | ActiveRecord: 233.1ms | Allocations: 10420)
+
+
+Started OPTIONS "/signup" for 127.0.0.1 at 2021-11-09 16:52:50 +0100
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/signup"):
+  
+Started GET "//auth/login" for ::1 at 2021-11-09 17:03:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/auth/login"):
+  
+Started GET "/auth/login" for ::1 at 2021-11-09 17:03:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/auth/login"):
+  
+Started GET "/signup" for ::1 at 2021-11-09 17:58:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/signup"):
+  
+Started POST "/signup" for ::1 at 2021-11-09 17:59:10 +0100
+Processing by UsersController#create as */*
+  Parameters: {"book_id"=>"1", "pages_read"=>"38"}
+[31mUnpermitted parameters: :book_id, :pages_read[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (199.08ms)
+Completed 422 Unprocessable Entity in 5116ms (Views: 589.9ms | ActiveRecord: 251.8ms | Allocations: 7545)
+
+
+Started OPTIONS "/signup" for ::1 at 2021-11-09 18:00:59 +0100
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/signup"):
+  
+Started POST "/signup" for ::1 at 2021-11-09 18:09:55 +0100
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"fourth@user.com"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 422 Unprocessable Entity in 1716ms (Views: 33.2ms | ActiveRecord: 391.8ms | Allocations: 7367)
+
+
+Started POST "/signup" for ::1 at 2021-11-09 18:10:40 +0100
+Processing by UsersController#create as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (13.63ms)
+Completed 422 Unprocessable Entity in 334ms (Views: 45.3ms | ActiveRecord: 0.0ms | Allocations: 2041)
+
+
+Started OPTIONS "/signup" for ::1 at 2021-11-09 19:16:10 +0100
+  [1m[35m (20.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/signup"):
+  
+Started GET "/" for ::1 at 2021-11-10 03:40:44 +0100
+Started GET "/static/js/bundle.js" for ::1 at 2021-11-10 03:40:47 +0100
+Started GET "/static/js/vendors~main.chunk.js" for ::1 at 2021-11-10 03:40:47 +0100
+Started GET "/static/js/main.chunk.js" for ::1 at 2021-11-10 03:40:47 +0100
+  [1m[35m (74.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/static/js/bundle.js"):
+  
+Processing by Rails::WelcomeController#index as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/static/js/main.chunk.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/static/js/vendors~main.chunk.js"):
+  
+  Rendering /home/che/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+Started GET "/static/js/main.chunk.js" for ::1 at 2021-11-10 03:40:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/static/js/main.chunk.js"):
+  
+  Rendered /home/che/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 179.4ms | Allocations: 3323)
+Completed 200 OK in 873ms (Views: 389.9ms | ActiveRecord: 0.0ms | Allocations: 12666)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-11-10 03:41:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/manifest.json" for ::1 at 2021-11-10 03:41:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/manifest.json"):
+  
+Started GET "/static/js/bundle.js" for ::1 at 2021-11-10 03:41:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/static/js/bundle.js"):
+  
+Started GET "/static/js/vendors~main.chunk.js" for ::1 at 2021-11-10 03:41:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/static/js/vendors~main.chunk.js"):
+  
+Started GET "/static/js/main.chunk.js" for ::1 at 2021-11-10 03:41:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/static/js/main.chunk.js"):
+  
+Started GET "/manifest.json" for ::1 at 2021-11-10 03:41:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/manifest.json"):
+  
+Started GET "/" for ::1 at 2021-11-10 03:43:45 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/che/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/che/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 34.1ms | Allocations: 178)
+Completed 200 OK in 61ms (Views: 35.5ms | ActiveRecord: 0.0ms | Allocations: 716)
+
+
+Started GET "/signup" for ::1 at 2021-11-10 03:43:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/signup"):
+  
+Started OPTIONS "/signup" for ::1 at 2021-11-10 03:51:59 +0100
+  [1m[35m (17.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/signup"):
+  
+Started OPTIONS "/users" for ::1 at 2021-11-10 03:57:30 +0100
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  
+Started OPTIONS "/users" for ::1 at 2021-11-10 03:59:27 +0100
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  
