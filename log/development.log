@@ -3034,3 +3034,209 @@ Started OPTIONS "/users" for ::1 at 2021-11-10 03:59:27 +0100
   
 ActionController::RoutingError (No route matches [OPTIONS] "/users"):
   
+Started POST "/signup" for ::1 at 2021-11-11 14:47:14 +0100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{}}
+[31mUnpermitted parameter: :user[0m
+Completed 422 Unprocessable Entity in 338ms (Views: 0.2ms | ActiveRecord: 6.3ms | Allocations: 7701)
+
+
+Started POST "/signup" for ::1 at 2021-11-11 14:47:34 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{}}
+[31mUnpermitted parameter: :user[0m
+Completed 422 Unprocessable Entity in 328ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1241)
+
+
+Started POST "/signup" for ::1 at 2021-11-11 14:48:15 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{}}
+[31mUnpermitted parameters: :password_confirmation, :user[0m
+Completed 422 Unprocessable Entity in 342ms (Views: 0.2ms | ActiveRecord: 7.3ms | Allocations: 3520)
+
+
+Started POST "/signup" for ::1 at 2021-11-11 14:51:04 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{}}
+[31mUnpermitted parameter: :user[0m
+Completed 422 Unprocessable Entity in 333ms (Views: 0.2ms | ActiveRecord: 6.8ms | Allocations: 7700)
+
+
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "che"], ["email", "one@email.com"], ["password_digest", "1"], ["created_at", "2021-11-11 13:54:43.282368"], ["updated_at", "2021-11-11 13:54:43.282368"]]
+  [1m[36mTRANSACTION (23.4ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/signup" for ::1 at 2021-11-11 14:58:33 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{}}
+[31mUnpermitted parameter: :user[0m
+Completed 422 Unprocessable Entity in 434ms (Views: 0.2ms | ActiveRecord: 27.7ms | Allocations: 3196)
+
+
+Started POST "/signup" for ::1 at 2021-11-11 14:59:15 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{}}
+[31mUnpermitted parameter: :user[0m
+Completed 422 Unprocessable Entity in 330ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1241)
+
+
+Started POST "/signup" for ::1 at 2021-11-11 14:59:23 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"admin@user.com", "email"=>"che.blancoo58@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"admin@user.com", "email"=>"che.blancoo58@gmail.com"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Create (2.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "admin@user.com"], ["email", "che.blancoo58@gmail.com"], ["password_digest", "$2a$12$PgI0XNV3vST1cjleDkRQjOc1BYOXPuDcCf/UqxrjhdpT3BIyZPJni"], ["created_at", "2021-11-11 13:59:24.182956"], ["updated_at", "2021-11-11 13:59:24.182956"]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (17.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "che.blancoo58@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "che.blancoo58@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1250ms (Views: 0.3ms | ActiveRecord: 20.3ms | Allocations: 5026)
+
+
+Started POST "/signup" for ::1 at 2021-11-11 15:02:48 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{}}
+[31mUnpermitted parameter: :user[0m
+Completed 422 Unprocessable Entity in 332ms (Views: 0.3ms | ActiveRecord: 9.7ms | Allocations: 3514)
+
+
+Started POST "/signup" for ::1 at 2021-11-11 15:03:11 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{}}
+[31mUnpermitted parameter: :user[0m
+Completed 422 Unprocessable Entity in 326ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1241)
+
+
+Started POST "/signup" for ::1 at 2021-11-11 15:04:50 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"one", "email"=>"one@user.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"one", "email"=>"one@user.com"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "one"], ["email", "one@user.com"], ["password_digest", "$2a$12$iRdSGF5VxpD9HmvhcLkuXutTfNDV.1j7/ztIJNcJzIFbzZJP3s/0C"], ["created_at", "2021-11-11 14:04:50.537770"], ["updated_at", "2021-11-11 14:04:50.537770"]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (13.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "one@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "one@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1050ms (Views: 0.2ms | ActiveRecord: 15.7ms | Allocations: 4472)
+
+
+Started POST "/signup" for ::1 at 2021-11-11 15:06:19 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{}}
+[31mUnpermitted parameter: :user[0m
+Completed 422 Unprocessable Entity in 355ms (Views: 0.2ms | ActiveRecord: 5.5ms | Allocations: 3495)
+
+
+Started POST "/signup" for ::1 at 2021-11-11 15:11:57 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"password_confirmation"=>"[FILTERED]", "user"=>{}}
+[31mUnpermitted parameter: :user[0m
+Completed 422 Unprocessable Entity in 10ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2097)
+
+
+Started POST "/signup" for ::1 at 2021-11-11 15:12:41 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{}}
+[31mUnpermitted parameter: :user[0m
+Completed 422 Unprocessable Entity in 319ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1226)
+
+
+Started POST "/signup" for ::1 at 2021-11-11 15:14:35 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"two@user.com", "user"=>{"email"=>"two@user.com"}}
+[31mUnpermitted parameter: :user[0m
+Completed 422 Unprocessable Entity in 8ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1611)
+
+
+Started POST "/signup" for ::1 at 2021-11-11 15:21:47 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{}}
+[31mUnpermitted parameter: :user[0m
+Completed 422 Unprocessable Entity in 344ms (Views: 0.2ms | ActiveRecord: 6.8ms | Allocations: 3823)
+
+
+Started POST "/signup" for ::1 at 2021-11-11 15:25:18 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{}}
+[31mUnpermitted parameter: :user[0m
+Completed 422 Unprocessable Entity in 337ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1224)
+
+
+Started POST "/signup" for ::1 at 2021-11-11 15:29:28 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{}}
+[31mUnpermitted parameter: :user[0m
+Completed 422 Unprocessable Entity in 320ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 1228)
+
+
+Started POST "/signup" for ::1 at 2021-11-11 15:33:18 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{}}
+[31mUnpermitted parameter: :user[0m
+Completed 422 Unprocessable Entity in 342ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1224)
+
+
+Started POST "/signup" for ::1 at 2021-11-11 16:04:41 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"password_confirmation"=>"[FILTERED]", "user"=>{}}
+[31mUnpermitted parameter: :user[0m
+Completed 422 Unprocessable Entity in 126ms (Views: 0.3ms | ActiveRecord: 42.1ms | Allocations: 3958)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-11 16:12:47 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_digest"=>"[FILTERED]", "user"=>{"password_digest"=>"[FILTERED]"}}
+[31mUnpermitted parameters: :password_digest, :user[0m
+Completed 422 Unprocessable Entity in 927ms (Views: 0.3ms | ActiveRecord: 167.1ms | Allocations: 3174)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-11 16:14:18 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_digest"=>"[FILTERED]", "user"=>{"password_digest"=>"[FILTERED]"}}
+[31mUnpermitted parameters: :password_digest, :user[0m
+Completed 422 Unprocessable Entity in 325ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 1220)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-11 19:14:39 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"two", "email"=>"two@user.com", "password"=>"[FILTERED]", "password_digest"=>"[FILTERED]", "user"=>{"username"=>"two", "email"=>"two@user.com", "password_digest"=>"[FILTERED]"}}
+[31mUnpermitted parameters: :password_digest, :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "two"], ["email", "two@user.com"], ["password_digest", "$2a$12$NdfCkSG6sbbKc8vJAisytOuVxi2ADR2CKrx8tdLY1HYYEsTqslazy"], ["created_at", "2021-11-11 18:14:40.325857"], ["updated_at", "2021-11-11 18:14:40.325857"]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (17.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "two@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "two@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 2987ms (Views: 0.2ms | ActiveRecord: 125.8ms | Allocations: 6514)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-11 19:18:12 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"three", "email"=>"three@user.com", "password"=>"[FILTERED]", "password_digest"=>"[FILTERED]", "user"=>{"username"=>"three", "email"=>"three@user.com", "password_digest"=>"[FILTERED]"}}
+[31mUnpermitted parameters: :password_digest, :user[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "three"], ["email", "three@user.com"], ["password_digest", "$2a$12$A7JNiQKB1dfHnAf5hezGeeJ.Y7ihhCEy3z49yU7mOAl2IheT.ttGq"], ["created_at", "2021-11-11 18:18:13.495529"], ["updated_at", "2021-11-11 18:18:13.495529"]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (253.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "three@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "three@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1229ms (Views: 0.2ms | ActiveRecord: 278.0ms | Allocations: 5411)
+
+
