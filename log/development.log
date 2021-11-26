@@ -6483,3 +6483,1959 @@ Processing by UsersController#create as HTML
 Completed 200 OK in 334ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 2819)
 
 
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 07:26:11 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"1", "email"=>"1@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"1", "email"=>"1@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 637ms (Views: 0.2ms | ActiveRecord: 67.6ms | Allocations: 4852)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 07:36:45 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"1", "email"=>"1@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"1", "email"=>"1@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (41.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 371ms (Views: 0.4ms | ActiveRecord: 230.2ms | Allocations: 4710)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 07:37:30 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"1", "email"=>"1@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"1", "email"=>"1@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 329ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 2409)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 07:37:46 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"1", "email"=>"1@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"1", "email"=>"1@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 318ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 2411)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 10:50:03 +0100
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 10:50:03 +0100
+  [1m[35m (113.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as HTML
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"1", "email"=>"1@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"1", "email"=>"1@1"}}
+  Parameters: {"username"=>"1", "email"=>"1@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"1", "email"=>"1@1"}}
+[31mUnpermitted parameter: :user[0m
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (80.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (81.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 1842ms (Views: 21.0ms | ActiveRecord: 173.3ms | Allocations: 12196)
+
+
+Completed 200 OK in 2081ms (Views: 0.3ms | ActiveRecord: 353.1ms | Allocations: 14602)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 10:50:42 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"1", "email"=>"1@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"1", "email"=>"1@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 350ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 2434)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 10:51:40 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"1", "email"=>"1@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"1", "email"=>"1@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 317ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 2432)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 10:53:00 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"1", "email"=>"1@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"1", "email"=>"1@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 376ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 2432)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 10:53:26 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"1", "email"=>"1@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"1", "email"=>"1@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 1640ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 2412)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 10:55:01 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"2", "email"=>"2@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"2", "email"=>"2@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (58.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "2@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (42.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "2"], ["email", "2@1"], ["password_digest", "$2a$12$b2aDQAZaolp3W4pqSLnBZu7zIrHfz05db.n/havb8x0GCWxGn4mvi"], ["created_at", "2021-11-22 09:55:01.605153"], ["updated_at", "2021-11-22 09:55:01.605153"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (26.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "2@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "2@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 2521ms (Views: 24.1ms | ActiveRecord: 129.2ms | Allocations: 5379)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 12:41:43 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"1", "email"=>"1@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"1", "email"=>"1@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 349ms (Views: 0.1ms | ActiveRecord: 12.8ms | Allocations: 4401)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 12:42:21 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"1", "email"=>"3@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"1", "email"=>"3@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "3@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (36.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "1"], ["email", "3@1"], ["password_digest", "$2a$12$4c9CaVaOrK1806pBW3IgJ.zzHZGLsiw1vd17Y9YbXeMGcs87v69UW"], ["created_at", "2021-11-22 11:42:21.797206"], ["updated_at", "2021-11-22 11:42:21.797206"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (29.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "3@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "3@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1026ms (Views: 0.2ms | ActiveRecord: 67.6ms | Allocations: 3633)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 12:49:18 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"1", "email"=>"4@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"1", "email"=>"4@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "4@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "1"], ["email", "4@1"], ["password_digest", "$2a$12$5157gyKQlkZ3V/teqvyKUeXLuWxCwLgstdE63WP6NLcFhKdGDUebm"], ["created_at", "2021-11-22 11:49:18.626871"], ["updated_at", "2021-11-22 11:49:18.626871"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (31.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "4@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "4@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1035ms (Views: 0.2ms | ActiveRecord: 40.3ms | Allocations: 5606)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 13:54:29 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"4", "email"=>"5@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"4", "email"=>"5@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "5@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "4"], ["email", "5@1"], ["password_digest", "$2a$12$DwOhnRF/C3cASxfLpnWTH.Wfd/kwFBzi7H/7iYAjCizQAw22jJ6Oa"], ["created_at", "2021-11-22 12:54:29.952736"], ["updated_at", "2021-11-22 12:54:29.952736"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (41.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "5@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "5@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1055ms (Views: 0.2ms | ActiveRecord: 64.0ms | Allocations: 5606)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 13:55:36 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"6", "email"=>"6@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"6", "email"=>"6@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "6@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "6"], ["email", "6@1"], ["password_digest", "$2a$12$5IisN5BacNmXQ7tI2ZUgoeLOptOeQY67FIkahfO70gvAj6n0MFHEq"], ["created_at", "2021-11-22 12:55:36.637913"], ["updated_at", "2021-11-22 12:55:36.637913"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (20.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "6@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "6@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 954ms (Views: 0.2ms | ActiveRecord: 22.2ms | Allocations: 3535)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 13:56:38 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"1", "email"=>"1@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"1", "email"=>"1@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 341ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 2407)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 13:58:52 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"1", "email"=>"1@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"1", "email"=>"1@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 339ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 2407)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 13:59:19 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"1", "email"=>"1@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"1", "email"=>"1@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 321ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 2407)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 14:16:41 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"1", "email"=>"1@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"1", "email"=>"1@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 415ms (Views: 0.2ms | ActiveRecord: 14.8ms | Allocations: 4383)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 14:16:54 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"6", "email"=>"6@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"6", "email"=>"6@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "6@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 345ms (Views: 0.2ms | ActiveRecord: 1.6ms | Allocations: 2408)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 14:17:00 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"6", "email"=>"7@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"6", "email"=>"7@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "7@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "6"], ["email", "7@1"], ["password_digest", "$2a$12$HCgdi4O5jYn8iIIP3RgNHOoe2KYVkEQ.hxO99VHkAtBEgFwGRd8f6"], ["created_at", "2021-11-22 13:17:01.004754"], ["updated_at", "2021-11-22 13:17:01.004754"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (10.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "7@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "7@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1073ms (Views: 0.3ms | ActiveRecord: 12.9ms | Allocations: 3631)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 14:54:15 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"1@1", "email"=>"che.blancoo58@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"1@1", "email"=>"che.blancoo58@gmail.com"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (2.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "che.blancoo58@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "1@1"], ["email", "che.blancoo58@gmail.com"], ["password_digest", "$2a$12$rUGWn5PEST8e8XFooJhMCemhSPbSOQA8UyGU.BtEB6yYk9U3HpgNy"], ["created_at", "2021-11-22 13:54:16.259124"], ["updated_at", "2021-11-22 13:54:16.259124"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (10.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "che.blancoo58@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "che.blancoo58@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1164ms (Views: 0.7ms | ActiveRecord: 44.4ms | Allocations: 5609)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 14:54:35 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"1@1", "email"=>"che.blancoo58@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"1@1", "email"=>"che.blancoo58@gmail.com"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "che.blancoo58@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 354ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 2407)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 14:57:11 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"1@1", "email"=>"che.blancoo58@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"1@1", "email"=>"che.blancoo58@gmail.com"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "che.blancoo58@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 331ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 2408)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 14:58:45 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"7", "email"=>"7@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"7", "email"=>"7@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "7@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 329ms (Views: 2.0ms | ActiveRecord: 1.4ms | Allocations: 2407)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 14:59:17 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"7", "email"=>"8@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"7", "email"=>"8@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "8@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "7"], ["email", "8@1"], ["password_digest", "$2a$12$UwIrYxJwrXipWO4jE0dPZeCSb5Jc4W9hGIkcwlcStLrLtQ91heU7i"], ["created_at", "2021-11-22 13:59:17.896386"], ["updated_at", "2021-11-22 13:59:17.896386"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (16.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "8@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "8@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 970ms (Views: 0.7ms | ActiveRecord: 18.8ms | Allocations: 3532)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 15:00:14 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"7", "email"=>"9@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"7", "email"=>"9@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "9@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "7"], ["email", "9@1"], ["password_digest", "$2a$12$xBvguNR3aI8jfW0tgUtsJuMhhPIF.r2Oj1J81ogaI7ZBkqcyHF3pi"], ["created_at", "2021-11-22 14:00:15.126638"], ["updated_at", "2021-11-22 14:00:15.126638"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (30.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "9@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "9@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 984ms (Views: 0.2ms | ActiveRecord: 33.1ms | Allocations: 3535)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 15:01:46 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"7", "email"=>"10@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"7", "email"=>"10@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "10@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "7"], ["email", "10@1"], ["password_digest", "$2a$12$ALpyOQpPPq0r3WKfDwhn.O6QTIv7IOwyah40EXIY.OSAvWZC9HBxW"], ["created_at", "2021-11-22 14:01:46.878045"], ["updated_at", "2021-11-22 14:01:46.878045"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (12.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "10@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "10@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1170ms (Views: 10.4ms | ActiveRecord: 15.0ms | Allocations: 3535)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 15:02:56 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"11", "email"=>"11@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"11", "email"=>"11@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "11@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "11"], ["email", "11@1"], ["password_digest", "$2a$12$71rLTHwUxrAvkp/Y9isxyuqlhuJSXRar8Gn9O12NcOyvOr/sT2eCq"], ["created_at", "2021-11-22 14:02:56.495894"], ["updated_at", "2021-11-22 14:02:56.495894"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (28.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "11@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "11@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1001ms (Views: 5.8ms | ActiveRecord: 30.4ms | Allocations: 3532)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 15:08:30 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"12", "email"=>"12@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"12", "email"=>"12@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "12@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "12"], ["email", "12@1"], ["password_digest", "$2a$12$jPrTdWilulUYKugLQ5d4e.5Frj3.Cpm3drZzFs.qtPSAr7.zGhuua"], ["created_at", "2021-11-22 14:08:31.062103"], ["updated_at", "2021-11-22 14:08:31.062103"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (17.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "12@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "12@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1018ms (Views: 0.3ms | ActiveRecord: 39.2ms | Allocations: 5606)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-22 15:11:10 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"12", "email"=>"13@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"12", "email"=>"13@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "13@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "12"], ["email", "13@1"], ["password_digest", "$2a$12$Da1XkiCx5e5FU0uSQR.AM.krp3XRqbwvj89qU0Lc7AGS1dTssxts."], ["created_at", "2021-11-22 14:11:11.183057"], ["updated_at", "2021-11-22 14:11:11.183057"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (15.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "13@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "13@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1010ms (Views: 0.3ms | ActiveRecord: 17.4ms | Allocations: 3535)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 06:37:31 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"13", "email"=>"13@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"13", "email"=>"13@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "13@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 1008ms (Views: 0.1ms | ActiveRecord: 141.3ms | Allocations: 4401)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 06:41:08 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"13", "email"=>"14@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"13", "email"=>"14@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "14@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (23.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "13"], ["email", "14@1"], ["password_digest", "$2a$12$llMG0b/KYzkGqubRDweNmOF0xUII/5Zyld4qSfMRXqOfEhIjlHKxK"], ["created_at", "2021-11-23 05:41:09.075544"], ["updated_at", "2021-11-23 05:41:09.075544"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (18.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "14@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "14@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1069ms (Views: 0.2ms | ActiveRecord: 43.5ms | Allocations: 3634)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 06:42:27 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"13", "email"=>"15@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"13", "email"=>"15@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "15@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "13"], ["email", "15@1"], ["password_digest", "$2a$12$fc1CFd04XgthetHUtZztZO9p1ROOkFs3BmhmpxY9TnNnK8bqHocR6"], ["created_at", "2021-11-23 05:42:27.529325"], ["updated_at", "2021-11-23 05:42:27.529325"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (26.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "15@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "15@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1061ms (Views: 0.2ms | ActiveRecord: 28.3ms | Allocations: 3535)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 06:43:19 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"13", "email"=>"16@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"13", "email"=>"16@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "16@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "13"], ["email", "16@1"], ["password_digest", "$2a$12$nwya3/4BCD09IcEQ7hjDWeMzpuV0vQUaHE7mKuNU/DHvqxHM8/w4q"], ["created_at", "2021-11-23 05:43:19.590936"], ["updated_at", "2021-11-23 05:43:19.590936"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (14.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "16@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "16@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1077ms (Views: 0.2ms | ActiveRecord: 17.3ms | Allocations: 3535)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 06:44:13 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"13", "email"=>"16@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"13", "email"=>"16@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "16@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 394ms (Views: 6.7ms | ActiveRecord: 2.3ms | Allocations: 2407)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 06:44:52 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"13", "email"=>"17@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"13", "email"=>"17@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "17@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "13"], ["email", "17@1"], ["password_digest", "$2a$12$v6kyonhg4le2IiYEsgGs4ukfGtFfnb0TyiRsqpUhB5GTZPXSwNN8W"], ["created_at", "2021-11-23 05:44:52.383481"], ["updated_at", "2021-11-23 05:44:52.383481"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (21.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "17@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "17@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1018ms (Views: 0.2ms | ActiveRecord: 24.3ms | Allocations: 3532)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 06:45:56 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"13", "email"=>"18@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"13", "email"=>"18@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "18@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "13"], ["email", "18@1"], ["password_digest", "$2a$12$.etkNkf4LI9rqX4uqoOHROcAmL1HS8FsLr5luR7qYawApMGJHeKYW"], ["created_at", "2021-11-23 05:45:57.282927"], ["updated_at", "2021-11-23 05:45:57.282927"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (28.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "18@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "18@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1154ms (Views: 0.2ms | ActiveRecord: 30.5ms | Allocations: 3535)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 06:46:59 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"13", "email"=>"19@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"13", "email"=>"19@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "19@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "13"], ["email", "19@1"], ["password_digest", "$2a$12$xuqQx6EjYUp90QgNIuiF5eeUMT5oMoZ9vfyH4c.zdNnySFcl9dbzW"], ["created_at", "2021-11-23 05:46:59.477132"], ["updated_at", "2021-11-23 05:46:59.477132"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (21.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "19@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "19@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1154ms (Views: 6.0ms | ActiveRecord: 23.6ms | Allocations: 3535)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 06:48:13 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"1", "email"=>"19@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"1", "email"=>"19@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "19@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 366ms (Views: 0.4ms | ActiveRecord: 1.1ms | Allocations: 2410)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 06:48:23 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"1", "email"=>"20@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"1", "email"=>"20@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "20@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "1"], ["email", "20@1"], ["password_digest", "$2a$12$JYpfHA7LjOlxUVhu93J/3..IMiAk5NxfHC7zfBWiVa0oEpgIL03b6"], ["created_at", "2021-11-23 05:48:24.334105"], ["updated_at", "2021-11-23 05:48:24.334105"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (11.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "20@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "20@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1064ms (Views: 0.2ms | ActiveRecord: 13.3ms | Allocations: 3532)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 06:49:05 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"1", "email"=>"21@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"1", "email"=>"21@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "21@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "1"], ["email", "21@1"], ["password_digest", "$2a$12$88nxEgZ8.qpme39KaWSdUOVxAN/3oJKb11DzsIL8yrEN.Tugyyese"], ["created_at", "2021-11-23 05:49:06.196537"], ["updated_at", "2021-11-23 05:49:06.196537"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (15.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "21@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "21@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1044ms (Views: 0.2ms | ActiveRecord: 17.8ms | Allocations: 3535)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 06:49:37 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"1", "email"=>"22@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"1", "email"=>"22@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "22@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "1"], ["email", "22@1"], ["password_digest", "$2a$12$UCUnr4RgvsQ8SQDinNl9AuteX5atTdgzYyqDeK/FMiD6TaZL1leJq"], ["created_at", "2021-11-23 05:49:38.183909"], ["updated_at", "2021-11-23 05:49:38.183909"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (24.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "22@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "22@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1179ms (Views: 0.2ms | ActiveRecord: 26.6ms | Allocations: 3535)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-11-23 06:49:39 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"22@1", "password"=>"[FILTERED]", "authentication"=>{"email"=>"22@1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "22@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "22@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "22@1"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:7:in `authenticate'
+Completed 200 OK in 675ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 1578)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 06:56:09 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"21", "email"=>"21@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"21", "email"=>"21@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "21@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 384ms (Views: 0.1ms | ActiveRecord: 8.9ms | Allocations: 4379)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 06:57:01 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"21", "email"=>"21@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"21", "email"=>"21@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "21@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 324ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 2407)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 07:12:36 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"21", "email"=>"21@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"21", "email"=>"21@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "21@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 359ms (Views: 0.2ms | ActiveRecord: 18.1ms | Allocations: 4383)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 07:23:56 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"1", "email"=>"21@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"1", "email"=>"21@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "21@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 343ms (Views: 0.2ms | ActiveRecord: 7.7ms | Allocations: 4380)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 07:24:50 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"1", "email"=>"21@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"1", "email"=>"21@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "21@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 336ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 2411)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 07:27:33 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"", "email"=>"21@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"", "email"=>"21@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "21@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 358ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 2888)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 07:49:22 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"", "email"=>""}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (16.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 597ms (Views: 0.1ms | ActiveRecord: 83.6ms | Allocations: 5708)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 07:55:29 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"", "email"=>""}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 110ms (Views: 0.2ms | ActiveRecord: 6.7ms | Allocations: 5568)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 14:37:07 +0100
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 14:37:43 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"", "email"=>""}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (76.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 647ms (Views: 0.6ms | ActiveRecord: 1775.7ms | Allocations: 7359)
+
+
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"", "email"=>""}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 101ms (Views: 0.2ms | ActiveRecord: 89.1ms | Allocations: 7192)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 14:43:27 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"chensoh", "email"=>"che.blancoo58@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"chensoh", "email"=>"che.blancoo58@gmail.com"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "che.blancoo58@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 698ms (Views: 0.2ms | ActiveRecord: 21.0ms | Allocations: 4822)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 14:43:44 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"chensoh", "email"=>"che.blanco58@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"chensoh", "email"=>"che.blanco58@gmail.com"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (6.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "che.blanco58@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (21.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "chensoh"], ["email", "che.blanco58@gmail.com"], ["password_digest", "$2a$12$RZBCBovcmhAivhVQ6fe2ieVmfE7youdS3HskIQzFOHkGX4TMJAG0y"], ["created_at", "2021-11-23 13:43:44.695338"], ["updated_at", "2021-11-23 13:43:44.695338"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (55.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "che.blanco58@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "che.blanco58@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 2027ms (Views: 12.3ms | ActiveRecord: 84.7ms | Allocations: 5259)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-11-23 14:43:46 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"che.blanco58@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"che.blanco58@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "che.blanco58@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "che.blanco58@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "che.blanco58@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:7:in `authenticate'
+Completed 200 OK in 908ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 1581)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 15:52:06 +0100
+  [1m[35m (122.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"2222", "email"=>"32@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"2222", "email"=>"32@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (43.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "32@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 954ms (Views: 0.3ms | ActiveRecord: 220.5ms | Allocations: 9302)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 15:52:30 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"2222", "email"=>"32@1.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"2222", "email"=>"32@1.com"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "32@1.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (43.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "2222"], ["email", "32@1.com"], ["password_digest", "$2a$12$QbAfpCPFkw8QfYxcPoY21uzQjHWm.MhADEaqi.C6R9S6Drl/zGu1C"], ["created_at", "2021-11-23 14:52:30.864493"], ["updated_at", "2021-11-23 14:52:30.864493"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (14.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "32@1.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "32@1.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1390ms (Views: 0.4ms | ActiveRecord: 60.8ms | Allocations: 4167)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-11-23 15:52:34 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"32@1.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"32@1.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "32@1.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "32@1.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "32@1.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:7:in `authenticate'
+Completed 200 OK in 671ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 1598)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 15:55:32 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"w", "email"=>"w@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"w", "email"=>"w@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "w@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "w"], ["email", "w@1"], ["password_digest", "$2a$12$D5LZz8pQDE0NWbT909MH7u1foRip4GkxEDHnBEMWk5Ol9gkTgdcyy"], ["created_at", "2021-11-23 14:55:33.947606"], ["updated_at", "2021-11-23 14:55:33.947606"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (15.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "w@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "w@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1041ms (Views: 0.2ms | ActiveRecord: 48.2ms | Allocations: 6182)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-11-23 15:55:34 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"w@1", "password"=>"[FILTERED]", "authentication"=>{"email"=>"w@1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "w@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "w@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "w@1"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:7:in `authenticate'
+Completed 200 OK in 668ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 1588)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 15:56:40 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"ee", "email"=>"3@12", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"ee", "email"=>"3@12"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "3@12"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "ee"], ["email", "3@12"], ["password_digest", "$2a$12$N5MzYMR8dZtV62o9.Cy.Geq2TzfAC3bkRbtNecJ5m/wtPN.ZWU/Xu"], ["created_at", "2021-11-23 14:56:40.754237"], ["updated_at", "2021-11-23 14:56:40.754237"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (11.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "3@12"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "3@12"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1025ms (Views: 0.3ms | ActiveRecord: 12.5ms | Allocations: 3535)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-11-23 15:56:41 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"3@12", "password"=>"[FILTERED]", "authentication"=>{"email"=>"3@12", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "3@12"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "3@12"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "3@12"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:7:in `authenticate'
+Completed 200 OK in 707ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 1564)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 15:58:29 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"11", "email"=>"11@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"11", "email"=>"11@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "11@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 335ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 2516)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 15:58:36 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"11", "email"=>"111@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"11", "email"=>"111@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "111@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "11"], ["email", "111@1"], ["password_digest", "$2a$12$yO8P8kssSINYCdWT1CSeV.jpe4PpUY/c8UaoBCwBUEYuwHpJb6Rsq"], ["created_at", "2021-11-23 14:58:37.135850"], ["updated_at", "2021-11-23 14:58:37.135850"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (21.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "111@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "111@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 965ms (Views: 0.2ms | ActiveRecord: 23.4ms | Allocations: 3532)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-11-23 15:58:37 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"111@1", "password"=>"[FILTERED]", "authentication"=>{"email"=>"111@1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "111@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "111@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "111@1"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:7:in `authenticate'
+Completed 200 OK in 643ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1563)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-11-23 16:04:13 +0100
+Started POST "/auth/login" for 127.0.0.1 at 2021-11-23 16:04:14 +0100
+Processing by AuthenticationController#authenticate as HTML
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"", "password"=>"[FILTERED]", "authentication"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  Parameters: {"email"=>"", "password"=>"[FILTERED]", "authentication"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 400ms (Views: 0.2ms | ActiveRecord: 61.1ms | Allocations: 5388)
+
+
+Completed 401 Unauthorized in 328ms (Views: 0.2ms | ActiveRecord: 78.4ms | Allocations: 5092)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-11-23 16:04:26 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"", "password"=>"[FILTERED]", "authentication"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 7ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 717)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-11-23 16:05:11 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"", "password"=>"[FILTERED]", "authentication"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 697)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-11-23 16:05:11 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"", "password"=>"[FILTERED]", "authentication"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 4ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 697)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-11-23 16:05:18 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"", "password"=>"[FILTERED]", "authentication"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 697)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 16:32:33 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"11", "email"=>"0@0", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"11", "email"=>"0@0"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "0@0"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (13.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "11"], ["email", "0@0"], ["password_digest", "$2a$12$1zIJBHTn8y996WDYMBROAeSuyP6EqmPfBgUsiCPdiE.VmK6x0Ohui"], ["created_at", "2021-11-23 15:32:33.929688"], ["updated_at", "2021-11-23 15:32:33.929688"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (33.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "0@0"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "0@0"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1674ms (Views: 0.3ms | ActiveRecord: 91.1ms | Allocations: 5610)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-11-23 16:32:35 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"0@0", "password"=>"[FILTERED]", "authentication"=>{"email"=>"0@0", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "0@0"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "0@0"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "0@0"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:7:in `authenticate'
+Completed 200 OK in 811ms (Views: 0.6ms | ActiveRecord: 0.8ms | Allocations: 1563)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 16:33:58 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"34", "email"=>"1@@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"34", "email"=>"1@@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "34"], ["email", "1@@1"], ["password_digest", "$2a$12$eYcKb4StWCUbGp7TsKmKwOvGCJ6ANmA0B1TWZL9191XnOcFpXw.1u"], ["created_at", "2021-11-23 15:33:58.769759"], ["updated_at", "2021-11-23 15:33:58.769759"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (12.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 984ms (Views: 0.2ms | ActiveRecord: 14.8ms | Allocations: 3539)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-11-23 16:33:59 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"1@@1", "password"=>"[FILTERED]", "authentication"=>{"email"=>"1@@1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@@1"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:7:in `authenticate'
+Completed 200 OK in 648ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 1563)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 16:59:53 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"tes", "email"=>"tes@t", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"tes", "email"=>"tes@t"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tes@t"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "tes"], ["email", "tes@t"], ["password_digest", "$2a$12$x34oWKyO4df3QhHeuaM1OOwh8CVu865j5PpVp9RN5Y/v/kYUWMUp."], ["created_at", "2021-11-23 15:59:54.392204"], ["updated_at", "2021-11-23 15:59:54.392204"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (13.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tes@t"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tes@t"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1053ms (Views: 0.2ms | ActiveRecord: 65.4ms | Allocations: 5606)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-11-23 16:59:55 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"tes@t", "password"=>"[FILTERED]", "authentication"=>{"email"=>"tes@t", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tes@t"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tes@t"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tes@t"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:7:in `authenticate'
+Completed 200 OK in 651ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 1560)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-23 17:20:03 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"ts", "email"=>"tse@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"ts", "email"=>"tse@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tse@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "ts"], ["email", "tse@1"], ["password_digest", "$2a$12$c165elPKFCHH5rU1DfVrTOYSLrCge1ZJRpAQjXKX/jpcpvhxKD4jS"], ["created_at", "2021-11-23 16:20:04.141749"], ["updated_at", "2021-11-23 16:20:04.141749"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (32.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tse@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tse@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1054ms (Views: 0.5ms | ActiveRecord: 42.3ms | Allocations: 5604)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-11-23 17:20:04 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"tse@1", "password"=>"[FILTERED]", "authentication"=>{"email"=>"tse@1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tse@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tse@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tse@1"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:7:in `authenticate'
+Completed 200 OK in 632ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1561)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-25 17:35:55 +0100
+  [1m[35m (27.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"admin@user.com", "email"=>"admin@user.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"admin@user.com", "email"=>"admin@user.com"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (30.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@user.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (35.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "admin@user.com"], ["email", "admin@user.com"], ["password_digest", "$2a$12$kPklRe13lmENMtc7m7vtE.8q.VB3Su4ZNwKEwpeoN1heYkjE3hDyy"], ["created_at", "2021-11-25 16:35:58.956571"], ["updated_at", "2021-11-25 16:35:58.956571"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (23.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1297ms (Views: 0.3ms | ActiveRecord: 211.5ms | Allocations: 9728)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-11-25 17:35:59 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"admin@user.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@user.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@user.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:7:in `authenticate'
+Completed 200 OK in 641ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 1589)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-25 19:41:14 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"tet", "email"=>"tt@y", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"tet", "email"=>"tt@y"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tt@y"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "tet"], ["email", "tt@y"], ["password_digest", "$2a$12$1yp2ipysJuMTfnarheNOQu6z/Ai1qr6GMfc4AhzFZjUWh2GAT4Lyu"], ["created_at", "2021-11-25 18:41:15.157963"], ["updated_at", "2021-11-25 18:41:15.157963"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (9.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tt@y"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tt@y"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1598ms (Views: 0.2ms | ActiveRecord: 85.7ms | Allocations: 5681)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-11-25 19:41:16 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"tt@y", "password"=>"[FILTERED]", "authentication"=>{"email"=>"tt@y", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tt@y"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tt@y"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tt@y"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:7:in `authenticate'
+Completed 200 OK in 745ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 1560)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 20:16:11 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"we", "Authorization"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozNCwiZXhwIjoxNjM3OTUyMDc2fQ.d59aCmejgJZPo7wVwIdM1Bp04pdKOiYq51D6mGbHvtY", "cat"=>{"name"=>"we"}}
+Completed 422 Unprocessable Entity in 14ms (Views: 0.2ms | ActiveRecord: 17.0ms | Allocations: 195)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 21:08:04 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"we", "cat"=>{"name"=>"we"}}
+Completed 422 Unprocessable Entity in 10ms (Views: 10.1ms | Allocations: 88)
+
+
+Started POST "/cats" for ::1 at 2021-11-25 21:10:39 +0100
+Processing by V1::CatsController#create as */*
+Completed 422 Unprocessable Entity in 176ms (Views: 0.2ms | Allocations: 180)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 21:19:16 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"we", "cat"=>{"name"=>"we"}}
+  [1m[36mUser Load (24.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/cats_controller.rb:9:in `create'
+  [1m[36mCat Create (26.8ms)[0m  [1m[32mINSERT INTO "cats" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "we"], ["created_at", "2021-11-25 20:19:17.691417"], ["updated_at", "2021-11-25 20:19:17.691417"]]
+  ↳ app/controllers/v1/cats_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (32.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/cats_controller.rb:9:in `create'
+Completed 200 OK in 1346ms (Views: 17.3ms | ActiveRecord: 452.1ms | Allocations: 6144)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 21:19:43 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (15.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 422 Unprocessable Entity in 796ms (Views: 0.4ms | ActiveRecord: 15.6ms | Allocations: 2508)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 21:23:43 +0100
+  
+SyntaxError (/home/che/Desktop/final capstones/readbooktraker/app/controllers/v1/cats_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/v1/cats_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/v1/cats_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 21:24:36 +0100
+  
+SyntaxError (/home/che/Desktop/final capstones/readbooktraker/app/controllers/v1/cats_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/v1/cats_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/v1/cats_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 21:27:17 +0100
+  
+SyntaxError (/home/che/Desktop/final capstones/readbooktraker/app/controllers/v1/cats_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/v1/cats_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/v1/cats_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 21:29:12 +0100
+  
+SyntaxError (/home/che/Desktop/final capstones/readbooktraker/app/controllers/v1/cats_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/v1/cats_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/v1/cats_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 21:31:30 +0100
+  
+SyntaxError (/home/che/Desktop/final capstones/readbooktraker/app/controllers/v1/cats_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/v1/cats_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/v1/cats_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 21:32:15 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (21.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 175ms (Views: 0.1ms | ActiveRecord: 592.4ms | Allocations: 6319)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 21:33:59 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 21:34:27 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 1232)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 21:47:59 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (33.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 2113ms (Views: 0.1ms | ActiveRecord: 757.6ms | Allocations: 3311)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 21:48:09 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 21:48:44 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 1217)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 21:49:04 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 21:50:02 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 21:50:33 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 21:51:16 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 21:54:52 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 106ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 1219)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 21:55:22 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 21:56:02 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 21:56:46 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 21:56:58 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 278ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 21:58:46 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 22:03:38 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 22:04:01 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 22:04:10 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 95ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 22:07:52 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 117ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 1217)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 22:08:10 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 73ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 22:08:14 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 22:09:36 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 22:09:44 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 22:09:44 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 1216)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-25 22:22:42 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"", "email"=>""}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 486ms (Views: 0.3ms | ActiveRecord: 216.9ms | Allocations: 5978)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-11-25 22:29:48 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"test new", "email"=>"new@t", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"test new", "email"=>"new@t"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (2.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "new@t"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (19.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "test new"], ["email", "new@t"], ["password_digest", "$2a$12$r27wD.YR4k64FKtWlf88O.dFclif3T3qWPrIAK6.S95hcHmErBW6u"], ["created_at", "2021-11-25 21:29:48.666797"], ["updated_at", "2021-11-25 21:29:48.666797"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (61.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "new@t"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "new@t"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1207ms (Views: 0.3ms | ActiveRecord: 91.5ms | Allocations: 7133)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-11-25 22:29:49 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"new@t", "password"=>"[FILTERED]", "authentication"=>{"email"=>"new@t", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "new@t"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "new@t"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "new@t"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:7:in `authenticate'
+Completed 200 OK in 623ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 1589)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 22:30:13 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (10.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 106ms (Views: 0.2ms | ActiveRecord: 10.8ms | Allocations: 1217)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 22:38:19 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 21ms (Views: 0.2ms | ActiveRecord: 6.5ms | Allocations: 3285)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 22:47:11 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 18ms (Views: 0.1ms | ActiveRecord: 6.4ms | Allocations: 3263)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 22:48:34 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 35ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 22:49:50 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-25 22:49:57 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-26 08:50:01 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"classics", "cat"=>{"name"=>"classics"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+  [1m[36mCat Create (30.5ms)[0m  [1m[32mINSERT INTO "cats" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "classics"], ["created_at", "2021-11-26 07:50:02.566696"], ["updated_at", "2021-11-26 07:50:02.566696"]]
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (32.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+Completed 200 OK in 378ms (Views: 13.0ms | ActiveRecord: 164.8ms | Allocations: 4462)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-26 08:54:11 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"Horrorr", "cat"=>{"name"=>"Horrorr"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Horrorr"], ["created_at", "2021-11-26 07:54:11.485668"], ["updated_at", "2021-11-26 07:54:11.485668"]]
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (47.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+Completed 200 OK in 55ms (Views: 0.3ms | ActiveRecord: 48.2ms | Allocations: 2352)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-26 08:55:53 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"Literary", "cat"=>{"name"=>"Literary"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Literary"], ["created_at", "2021-11-26 07:55:53.438346"], ["updated_at", "2021-11-26 07:55:53.438346"]]
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (34.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+Completed 200 OK in 45ms (Views: 0.5ms | ActiveRecord: 35.1ms | Allocations: 2352)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-26 08:57:12 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1214)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-26 08:58:58 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"Horrorr", "cat"=>{"name"=>"Horrorr"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+  [1m[36mCat Create (17.8ms)[0m  [1m[32mINSERT INTO "cats" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Horrorr"], ["created_at", "2021-11-26 07:58:58.708616"], ["updated_at", "2021-11-26 07:58:58.708616"]]
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (9.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+Completed 200 OK in 38ms (Views: 0.5ms | ActiveRecord: 28.1ms | Allocations: 2354)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-26 09:03:56 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"classics", "cat"=>{"name"=>"classics"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "classics"], ["created_at", "2021-11-26 08:03:56.653134"], ["updated_at", "2021-11-26 08:03:56.653134"]]
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (28.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+Completed 200 OK in 38ms (Views: 0.3ms | ActiveRecord: 29.2ms | Allocations: 2352)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-26 09:04:57 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"fiction", "cat"=>{"name"=>"fiction"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "fiction"], ["created_at", "2021-11-26 08:04:57.758575"], ["updated_at", "2021-11-26 08:04:57.758575"]]
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (15.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+Completed 200 OK in 26ms (Views: 0.5ms | ActiveRecord: 16.7ms | Allocations: 2352)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-26 09:05:11 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1214)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-26 09:05:53 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-26 09:06:50 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-26 09:06:53 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-26 09:07:01 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-26 09:07:12 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-26 09:07:22 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"Literary", "cat"=>{"name"=>"Literary"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Literary"], ["created_at", "2021-11-26 08:07:22.054977"], ["updated_at", "2021-11-26 08:07:22.054977"]]
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (44.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+Completed 200 OK in 53ms (Views: 0.4ms | ActiveRecord: 45.2ms | Allocations: 2354)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-26 09:08:21 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1214)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-26 09:08:26 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 18ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1217)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-26 09:08:28 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-26 09:10:04 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-26 09:11:14 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-26 09:11:22 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-26 09:11:31 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1216)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-26 09:11:44 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"classics", "cat"=>{"name"=>"classics"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "classics"], ["created_at", "2021-11-26 08:11:45.081794"], ["updated_at", "2021-11-26 08:11:45.081794"]]
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (11.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+Completed 200 OK in 23ms (Views: 0.5ms | ActiveRecord: 12.3ms | Allocations: 2355)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-26 09:12:47 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"fiction", "cat"=>{"name"=>"fiction"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "fiction"], ["created_at", "2021-11-26 08:12:50.011715"], ["updated_at", "2021-11-26 08:12:50.011715"]]
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (17.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+Completed 201 Created in 219ms (Views: 1.3ms | ActiveRecord: 242.9ms | Allocations: 7432)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-26 09:13:05 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"", "cat"=>{"name"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1261)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-11-26 09:14:11 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"name"=>"we", "cat"=>{"name"=>"we"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :cat[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "we"], ["created_at", "2021-11-26 08:14:11.896163"], ["updated_at", "2021-11-26 08:14:11.896163"]]
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (37.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+Completed 201 Created in 45ms (Views: 0.4ms | ActiveRecord: 38.4ms | Allocations: 2354)
+
+

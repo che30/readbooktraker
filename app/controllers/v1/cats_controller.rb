@@ -6,8 +6,13 @@ module V1
     end
 
     def create
-      @cat = Cat.create!(cat_params)
-      json_response(@cat)
+      @cat = Cat.new(cat_params)
+      if @cat.save
+      json_response(@cat,:created)
+      else 
+        @errors = @cat.errors.full_messages.join(";")
+        json_response(@errors)
+      end
     end
 
     private

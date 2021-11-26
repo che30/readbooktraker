@@ -9,9 +9,9 @@ class UsersController < ApplicationController
     response = { message: Message.account_created, auth_token: auth_token}
     json_response(response, :created)
     else
-      response = @user.errors.full_messages
        response = @user.errors.full_messages.join(";")
-      render json: { status: 500, errors: response}
+       json_response(response)
+      # render json: { status: 500, errors: response}
     end
   end
 
