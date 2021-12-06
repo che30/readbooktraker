@@ -1,5 +1,9 @@
 module V1
   class BooksController < ApplicationController
+    def allbooks
+      @books = Book.all
+      json_response(@books)
+    end
     def create
       @book = Book.create!(books_params)
       json_response(@book, :created)

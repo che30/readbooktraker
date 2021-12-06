@@ -9751,3 +9751,5356 @@ Processing by V1::BooksController#create as JSON
 Completed 201 Created in 584ms (Views: 1.0ms | ActiveRecord: 249.4ms | Allocations: 19105)
 
 
+Started POST "/cats/1/books" for 127.0.0.1 at 2021-12-06 07:55:17 +0100
+Processing by V1::BooksController#create as JSON
+  Parameters: {"name"=>"tu", "author"=>"eric", "isbn"=>"3456", "number_of_pages"=>"1234", "cat_id"=>"1"}
+  [1m[36mUser Load (223.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mCat Load (20.1ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mBook Create (350.5ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "isbn", "number_of_pages", "cat_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "tu"], ["author", "eric"], ["isbn", "3456"], ["number_of_pages", "1234"], ["cat_id", 1], ["created_at", "2021-12-06 06:55:22.745233"], ["updated_at", "2021-12-06 06:55:22.745233"]]
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (297.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+Completed 201 Created in 5157ms (Views: 186.6ms | ActiveRecord: 2239.0ms | Allocations: 5398)
+
+
+Started POST "/cats/1/books" for 127.0.0.1 at 2021-12-06 07:58:14 +0100
+Processing by V1::BooksController#create as JSON
+  Parameters: {"name"=>"cbcg", "author"=>"iknnk", "isbn"=>"3456", "number_of_pages"=>"23", "cat_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mBook Create (0.7ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "isbn", "number_of_pages", "cat_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "cbcg"], ["author", "iknnk"], ["isbn", "3456"], ["number_of_pages", "23"], ["cat_id", 1], ["created_at", "2021-12-06 06:58:14.304854"], ["updated_at", "2021-12-06 06:58:14.304854"]]
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (221.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+Completed 201 Created in 260ms (Views: 0.7ms | ActiveRecord: 223.5ms | Allocations: 3286)
+
+
+Started POST "/cats/2/books" for 127.0.0.1 at 2021-12-06 08:26:11 +0100
+Processing by V1::BooksController#create as JSON
+  Parameters: {"name"=>"roland", "author"=>"njewou", "isbn"=>"567", "number_of_pages"=>"34", "cat_id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mCat Load (1.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mBook Create (50.4ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "isbn", "number_of_pages", "cat_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "roland"], ["author", "njewou"], ["isbn", "567"], ["number_of_pages", "34"], ["cat_id", 2], ["created_at", "2021-12-06 07:26:18.936500"], ["updated_at", "2021-12-06 07:26:18.936500"]]
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (184.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+Completed 201 Created in 8229ms (Views: 426.9ms | ActiveRecord: 370.2ms | Allocations: 5355)
+
+
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:29:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:33 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:33 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:33 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:33 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:33 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:33 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:33 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:33 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:30:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:33 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:33 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:33 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:33 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:33 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:33 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:33 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:33 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:31:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:32:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:32:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:32:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:32:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:32:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:32:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:32:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:32:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:32:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:32:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:32:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:32:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:32:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:32:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:32:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:32:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:32:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:32:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:32:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:32:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:32:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:32:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:32:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:33:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:33:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:34:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:34:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:35:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:48:00 +0100
+  [1m[35m (46.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:48:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:53:01 +0100
+  
+ActionController::RoutingError (uninitialized constant BooksController
+Did you mean?  Bookstudytraker):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:53:16 +0100
+  
+ActionController::RoutingError (uninitialized constant BooksController
+Did you mean?  Bookstudytraker):
+  
+Started GET "/books" for 127.0.0.1 at 2021-12-06 08:56:38 +0100
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for V1::BooksController
+Did you mean?  json_response
+               create
+               current_user
+               books):
+  
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+actionpack (6.1.4.1) lib/action_dispatch/routing/mapper.rb:49:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/books" for 127.0.0.1 at 2021-12-06 09:08:27 +0100
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for V1::BooksController
+Did you mean?  json_response
+               create
+               current_user
+               books):
+  
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+actionpack (6.1.4.1) lib/action_dispatch/routing/mapper.rb:49:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/books" for ::1 at 2021-12-06 09:14:41 +0100
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for V1::BooksController
+Did you mean?  json_response
+               create
+               current_user
+               books):
+  
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+actionpack (6.1.4.1) lib/action_dispatch/routing/mapper.rb:49:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[36mUser Load (23.6ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mBook Load (78.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+Started GET "/books" for 127.0.0.1 at 2021-12-06 09:17:27 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for V1::BooksController
+Did you mean?  json_response
+               create
+               current_user
+               books):
+  
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+actionpack (6.1.4.1) lib/action_dispatch/routing/mapper.rb:49:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/allbooks" for 127.0.0.1 at 2021-12-06 09:24:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/allbooks"):
+  
+Started GET "/allbooks" for 127.0.0.1 at 2021-12-06 09:25:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/allbooks"):
+  
+Started GET "/allbooks" for 127.0.0.1 at 2021-12-06 09:27:09 +0100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/allbooks"):
+  
+Started GET "/allbooks" for 127.0.0.1 at 2021-12-06 09:29:13 +0100
+Processing by V1::BooksController#allbooks as JSON
+  [1m[36mUser Load (21.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 543ms (Views: 20.0ms | ActiveRecord: 49.9ms | Allocations: 13225)
+
+
