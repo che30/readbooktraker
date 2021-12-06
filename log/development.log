@@ -8439,3 +8439,1315 @@ Processing by V1::CatsController#create as HTML
 Completed 201 Created in 45ms (Views: 0.4ms | ActiveRecord: 38.4ms | Allocations: 2354)
 
 
+Started GET "/cats" for 127.0.0.1 at 2021-11-26 18:17:54 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (96.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (46.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 8818ms (Views: 2097.2ms | ActiveRecord: 2194.9ms | Allocations: 4113)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-11-26 18:19:26 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 93ms (Views: 35.7ms | ActiveRecord: 1.0ms | Allocations: 1983)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-11-26 18:24:07 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (42.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (19.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 1140ms (Views: 232.8ms | ActiveRecord: 62.0ms | Allocations: 1984)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-11-26 18:25:11 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (22.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (1.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 2856ms (Views: 2683.8ms | ActiveRecord: 24.1ms | Allocations: 1989)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-11-26 18:28:53 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (47.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (1.1ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 913ms (Views: 612.9ms | ActiveRecord: 49.0ms | Allocations: 1984)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-11-26 18:29:02 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 13ms (Views: 6.3ms | ActiveRecord: 1.1ms | Allocations: 1983)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-11-26 18:29:44 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 228ms (Views: 199.4ms | ActiveRecord: 0.7ms | Allocations: 1983)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-11-26 18:29:45 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 69ms (Views: 65.0ms | ActiveRecord: 0.9ms | Allocations: 1983)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-11-26 18:30:14 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 214ms (Views: 51.6ms | ActiveRecord: 0.9ms | Allocations: 1983)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-11-26 18:53:50 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (19.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 7147ms (Views: 47.4ms | ActiveRecord: 1424.9ms | Allocations: 4063)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-11-26 18:54:08 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (1.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 14ms (Views: 6.5ms | ActiveRecord: 2.5ms | Allocations: 1983)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-11-26 18:56:01 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (20.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 57ms (Views: 17.1ms | ActiveRecord: 20.5ms | Allocations: 1983)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-11-26 18:56:25 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 58ms (Views: 4.3ms | ActiveRecord: 0.8ms | Allocations: 1983)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-11-26 19:01:05 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (29.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (7.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 192ms (Views: 36.6ms | ActiveRecord: 36.7ms | Allocations: 1983)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-11-26 19:01:18 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (0.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 67ms (Views: 59.3ms | ActiveRecord: 1.4ms | Allocations: 1983)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-11-26 19:31:14 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (33.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 1818ms (Views: 86.5ms | ActiveRecord: 724.8ms | Allocations: 4036)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-11-26 19:31:31 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 859ms (Views: 112.8ms | ActiveRecord: 1.7ms | Allocations: 1983)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-11-26 19:32:17 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 57ms (Views: 53.5ms | ActiveRecord: 0.6ms | Allocations: 1983)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-11-26 19:32:36 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 16ms (Views: 10.4ms | ActiveRecord: 0.9ms | Allocations: 1983)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-11-26 19:51:58 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (111.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (2.1ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 5660ms (Views: 53.7ms | ActiveRecord: 2134.2ms | Allocations: 4052)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-01 05:40:00 +0100
+  [1m[35m (45.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by V1::CatsController#index as HTML
+Completed 422 Unprocessable Entity in 35ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 449)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-01 05:42:20 +0100
+Processing by V1::CatsController#index as HTML
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 176)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-01 05:44:16 +0100
+Processing by V1::CatsController#index as HTML
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 176)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-01 05:45:54 +0100
+Processing by V1::CatsController#index as HTML
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 176)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-01 05:48:43 +0100
+Processing by V1::CatsController#index as HTML
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | Allocations: 174)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-01 05:50:45 +0100
+Processing by V1::CatsController#index as HTML
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | Allocations: 174)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-01 05:51:34 +0100
+Processing by V1::CatsController#index as HTML
+Completed 422 Unprocessable Entity in 1ms (Views: 0.3ms | Allocations: 174)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-12-01 05:57:11 +0100
+Processing by V1::CatsController#create as */*
+Completed 422 Unprocessable Entity in 2ms (Views: 0.7ms | Allocations: 156)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-01 06:00:25 +0100
+Processing by V1::CatsController#index as HTML
+Completed 422 Unprocessable Entity in 33ms (Views: 0.3ms | Allocations: 334)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-01 06:20:56 +0100
+Processing by V1::CatsController#index as HTML
+Completed 422 Unprocessable Entity in 1ms (Views: 0.3ms | Allocations: 174)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-01 06:21:25 +0100
+Processing by V1::CatsController#index as HTML
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | Allocations: 174)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-01 06:23:56 +0100
+Processing by V1::CatsController#index as HTML
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | Allocations: 176)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-01 06:25:31 +0100
+Processing by V1::CatsController#index as HTML
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | Allocations: 174)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-01 06:27:43 +0100
+Processing by V1::CatsController#index as HTML
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | Allocations: 174)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-01 06:29:59 +0100
+Processing by V1::CatsController#index as HTML
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | Allocations: 174)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-01 06:33:25 +0100
+Processing by V1::CatsController#index as HTML
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | Allocations: 336)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-01 06:35:10 +0100
+Processing by V1::CatsController#index as HTML
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | Allocations: 174)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-01 06:35:33 +0100
+Processing by V1::CatsController#index as HTML
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | Allocations: 174)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-01 06:38:32 +0100
+Processing by V1::CatsController#index as HTML
+Completed 422 Unprocessable Entity in 1ms (Views: 0.3ms | Allocations: 174)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-01 06:39:44 +0100
+Processing by V1::CatsController#index as HTML
+Completed 422 Unprocessable Entity in 1ms (Views: 0.4ms | Allocations: 174)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-01 06:40:22 +0100
+Processing by V1::CatsController#index as HTML
+Completed 422 Unprocessable Entity in 1ms (Views: 0.3ms | Allocations: 174)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-01 06:51:06 +0100
+Processing by V1::CatsController#index as HTML
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | Allocations: 174)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-01 06:51:38 +0100
+Processing by V1::CatsController#index as HTML
+Completed 422 Unprocessable Entity in 0ms (Views: 0.2ms | Allocations: 96)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-01 06:56:37 +0100
+Processing by V1::CatsController#index as HTML
+Completed 422 Unprocessable Entity in 1ms (Views: 0.3ms | Allocations: 96)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-01 06:57:02 +0100
+Processing by V1::CatsController#index as HTML
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | Allocations: 96)
+
+
+  [1m[36mUser Load (80.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/auth/login" for 127.0.0.1 at 2021-12-03 16:39:43 +0100
+Started POST "/auth/login" for 127.0.0.1 at 2021-12-03 16:39:43 +0100
+  [1m[35m (60.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#authenticate as HTML
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"admin@user.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@user.com", "password"=>"[FILTERED]"}}
+  Parameters: {"email"=>"1@1", "password"=>"[FILTERED]", "authentication"=>{"email"=>"1@1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 1457ms (Views: 110.7ms | ActiveRecord: 9.7ms | Allocations: 10633)
+
+
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:7:in `authenticate'
+Completed 200 OK in 2559ms (Views: 0.5ms | ActiveRecord: 748.4ms | Allocations: 11287)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-12-03 16:40:03 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"1@1", "password"=>"[FILTERED]", "authentication"=>{"email"=>"1@1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:7:in `authenticate'
+Completed 200 OK in 825ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 1583)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-12-03 16:41:48 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"admin@user.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@user.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@user.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 430ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 755)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-12-03 16:42:11 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"1@1", "password"=>"[FILTERED]", "authentication"=>{"email"=>"1@1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:7:in `authenticate'
+Completed 200 OK in 839ms (Views: 0.4ms | ActiveRecord: 0.7ms | Allocations: 1582)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-12-03 16:46:44 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"1@1", "password"=>"[FILTERED]", "authentication"=>{"email"=>"1@1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:7:in `authenticate'
+Completed 200 OK in 834ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 1564)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-12-03 17:24:20 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"1@1", "password"=>"[FILTERED]", "authentication"=>{"email"=>"1@1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:7:in `authenticate'
+Completed 200 OK in 899ms (Views: 0.3ms | ActiveRecord: 50.1ms | Allocations: 3614)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-03 17:26:50 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (15.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (35.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 1527ms (Views: 895.1ms | ActiveRecord: 61.0ms | Allocations: 4709)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-03 18:51:20 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (1.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 6438ms (Views: 1557.8ms | ActiveRecord: 13.6ms | Allocations: 4041)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-03 18:51:27 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 11ms (Views: 6.1ms | ActiveRecord: 1.4ms | Allocations: 1983)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-03 18:51:57 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 0.9ms | Allocations: 1985)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-04 07:22:29 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (25.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 2222ms (Views: 61.0ms | ActiveRecord: 420.0ms | Allocations: 4066)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-04 07:23:25 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (233.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (105.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 2547ms (Views: 161.0ms | ActiveRecord: 338.6ms | Allocations: 1991)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-04 07:26:11 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (94.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 2190ms (Views: 235.7ms | ActiveRecord: 95.2ms | Allocations: 1988)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-12-04 07:36:20 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"1@1", "password"=>"[FILTERED]", "authentication"=>{"email"=>"1@1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:7:in `authenticate'
+Completed 200 OK in 2343ms (Views: 95.6ms | ActiveRecord: 234.8ms | Allocations: 3614)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-04 07:36:25 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 191ms (Views: 126.9ms | ActiveRecord: 1.6ms | Allocations: 1987)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-12-04 07:53:47 +0100
+  [1m[35m (29.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"1@1", "password"=>"[FILTERED]", "authentication"=>{"email"=>"1@1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (35.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:7:in `authenticate'
+Completed 200 OK in 1433ms (Views: 0.5ms | ActiveRecord: 167.7ms | Allocations: 9319)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-04 07:53:55 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (242.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 466ms (Views: 30.9ms | ActiveRecord: 248.5ms | Allocations: 4752)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-12-04 07:55:36 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"1@1", "password"=>"[FILTERED]", "authentication"=>{"email"=>"1@1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:7:in `authenticate'
+Completed 200 OK in 624ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 1584)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-04 07:55:37 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 7ms (Views: 3.1ms | ActiveRecord: 1.4ms | Allocations: 1985)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-12-04 07:57:59 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"1@1", "password"=>"[FILTERED]", "authentication"=>{"email"=>"1@1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:7:in `authenticate'
+Completed 200 OK in 630ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 1582)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-04 07:57:59 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 9ms (Views: 4.5ms | ActiveRecord: 1.3ms | Allocations: 1985)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-12-04 08:00:55 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"1@1", "password"=>"[FILTERED]", "authentication"=>{"email"=>"1@1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:7:in `authenticate'
+Completed 200 OK in 619ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 1561)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-04 08:00:55 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 9ms (Views: 5.0ms | ActiveRecord: 1.1ms | Allocations: 1983)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-12-04 08:56:18 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"1@1", "password"=>"[FILTERED]", "authentication"=>{"email"=>"1@1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (11.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:7:in `authenticate'
+Completed 200 OK in 13057ms (Views: 52.0ms | ActiveRecord: 2508.2ms | Allocations: 3676)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-04 08:56:32 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (20.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 1884ms (Views: 1135.3ms | ActiveRecord: 21.5ms | Allocations: 1988)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-12-04 08:58:05 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"1@1", "password"=>"[FILTERED]", "authentication"=>{"email"=>"1@1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:7:in `authenticate'
+Completed 200 OK in 1054ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 1584)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-04 08:58:06 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (0.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 79ms (Views: 66.1ms | ActiveRecord: 1.8ms | Allocations: 1985)
+
+
+  [1m[35m (13.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCat Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "cats" WHERE "cats"."name" = $1 LIMIT $2[0m  [["name", "fiction"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCat Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "cats" WHERE "cats"."name" = $1 LIMIT $2[0m  [["name", "horror"], ["LIMIT", 1]]
+  [1m[36mCat Create (180.5ms)[0m  [1m[32mINSERT INTO "cats" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "horror"], ["created_at", "2021-12-04 08:52:39.610121"], ["updated_at", "2021-12-04 08:52:39.610121"]]
+  [1m[36mTRANSACTION (36.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (48.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (403.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bookstudytraker_development"[0m
+  [1m[35m (334.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bookstudytraker_test"[0m
+  [1m[35m (993.2ms)[0m  [1m[35mCREATE DATABASE "bookstudytraker_development" ENCODING = 'unicode'[0m
+  [1m[35m (869.0ms)[0m  [1m[35mCREATE DATABASE "bookstudytraker_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (28.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "books" CASCADE[0m
+  [1m[35m (264.2ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "name" character varying, "author" character varying, "isbn" character varying, "number_of_pages" character varying, "cat_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (74.2ms)[0m  [1m[35mCREATE INDEX "index_books_on_cat_id" ON "books" ("cat_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "cats" CASCADE[0m
+  [1m[35m (116.4ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "measurements" CASCADE[0m
+  [1m[35m (119.1ms)[0m  [1m[35mCREATE TABLE "measurements" ("id" bigserial primary key, "pages_read" integer, "percent_left" character varying, "user_id" bigint NOT NULL, "book_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (131.1ms)[0m  [1m[35mCREATE INDEX "index_measurements_on_book_id" ON "measurements" ("book_id")[0m
+  [1m[35m (64.8ms)[0m  [1m[35mCREATE INDEX "index_measurements_on_user_id" ON "measurements" ("user_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (127.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (8.2ms)[0m  [1m[35mALTER TABLE "books" ADD CONSTRAINT "fk_rails_ff77da0e36"
+FOREIGN KEY ("cat_id")
+  REFERENCES "cats" ("id")
+[0m
+  [1m[35m (8.4ms)[0m  [1m[35mALTER TABLE "measurements" ADD CONSTRAINT "fk_rails_85b1ddff32"
+FOREIGN KEY ("book_id")
+  REFERENCES "books" ("id")
+[0m
+  [1m[35m (8.0ms)[0m  [1m[35mALTER TABLE "measurements" ADD CONSTRAINT "fk_rails_b199c8b9fc"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (117.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (12.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211101084329)[0m
+  [1m[35m (8.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20211021200309),
+(20211101084013),
+(20211101084151);
+
+[0m
+  [1m[35m (97.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-12-04 08:53:23.551775"], ["updated_at", "2021-12-04 08:53:23.551775"]]
+  [1m[36mTRANSACTION (17.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "fe2de2693bdae364e4b5945df980a99714ab229a"], ["created_at", "2021-12-04 08:53:23.596062"], ["updated_at", "2021-12-04 08:53:23.596062"]]
+  [1m[36mTRANSACTION (16.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "books" CASCADE[0m
+  [1m[35m (116.7ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "name" character varying, "author" character varying, "isbn" character varying, "number_of_pages" character varying, "cat_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (50.6ms)[0m  [1m[35mCREATE INDEX "index_books_on_cat_id" ON "books" ("cat_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "cats" CASCADE[0m
+  [1m[35m (106.9ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "measurements" CASCADE[0m
+  [1m[35m (149.8ms)[0m  [1m[35mCREATE TABLE "measurements" ("id" bigserial primary key, "pages_read" integer, "percent_left" character varying, "user_id" bigint NOT NULL, "book_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (51.8ms)[0m  [1m[35mCREATE INDEX "index_measurements_on_book_id" ON "measurements" ("book_id")[0m
+  [1m[35m (54.0ms)[0m  [1m[35mCREATE INDEX "index_measurements_on_user_id" ON "measurements" ("user_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (116.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (8.4ms)[0m  [1m[35mALTER TABLE "books" ADD CONSTRAINT "fk_rails_ff77da0e36"
+FOREIGN KEY ("cat_id")
+  REFERENCES "cats" ("id")
+[0m
+  [1m[35m (9.3ms)[0m  [1m[35mALTER TABLE "measurements" ADD CONSTRAINT "fk_rails_85b1ddff32"
+FOREIGN KEY ("book_id")
+  REFERENCES "books" ("id")
+[0m
+  [1m[35m (8.2ms)[0m  [1m[35mALTER TABLE "measurements" ADD CONSTRAINT "fk_rails_b199c8b9fc"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (107.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (4.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211101084329)[0m
+  [1m[35m (9.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20211021200309),
+(20211101084013),
+(20211101084151);
+
+[0m
+  [1m[35m (119.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-12-04 08:53:24.615345"], ["updated_at", "2021-12-04 08:53:24.615345"]]
+  [1m[36mTRANSACTION (8.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-12-04 08:53:24.636650"], ["key", "environment"]]
+  [1m[36mTRANSACTION (11.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "fe2de2693bdae364e4b5945df980a99714ab229a"], ["created_at", "2021-12-04 08:53:24.657136"], ["updated_at", "2021-12-04 08:53:24.657136"]]
+  [1m[36mTRANSACTION (23.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCat Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "cats" WHERE "cats"."name" = $1 LIMIT $2[0m  [["name", "fiction"], ["LIMIT", 1]]
+  [1m[36mCat Create (1.4ms)[0m  [1m[32mINSERT INTO "cats" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "fiction"], ["created_at", "2021-12-04 08:53:24.761814"], ["updated_at", "2021-12-04 08:53:24.761814"]]
+  [1m[36mTRANSACTION (20.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCat Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "cats" WHERE "cats"."name" = $1 LIMIT $2[0m  [["name", "horror"], ["LIMIT", 1]]
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "horror"], ["created_at", "2021-12-04 08:53:24.796288"], ["updated_at", "2021-12-04 08:53:24.796288"]]
+  [1m[36mTRANSACTION (20.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCat Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cats" WHERE "cats"."name" = $1 LIMIT $2[0m  [["name", "fiction"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCat Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "cats" WHERE "cats"."name" = $1 LIMIT $2[0m  [["name", "horror"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (627.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bookstudytraker_development"[0m
+  [1m[35m (271.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bookstudytraker_test"[0m
+  [1m[35m (848.5ms)[0m  [1m[35mCREATE DATABASE "bookstudytraker_development" ENCODING = 'unicode'[0m
+  [1m[35m (767.4ms)[0m  [1m[35mCREATE DATABASE "bookstudytraker_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "books" CASCADE[0m
+  [1m[35m (109.8ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "name" character varying, "author" character varying, "isbn" character varying, "number_of_pages" character varying, "cat_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (63.1ms)[0m  [1m[35mCREATE INDEX "index_books_on_cat_id" ON "books" ("cat_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "cats" CASCADE[0m
+  [1m[35m (182.9ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "measurements" CASCADE[0m
+  [1m[35m (197.4ms)[0m  [1m[35mCREATE TABLE "measurements" ("id" bigserial primary key, "pages_read" integer, "percent_left" character varying, "user_id" bigint NOT NULL, "book_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (86.3ms)[0m  [1m[35mCREATE INDEX "index_measurements_on_book_id" ON "measurements" ("book_id")[0m
+  [1m[35m (64.1ms)[0m  [1m[35mCREATE INDEX "index_measurements_on_user_id" ON "measurements" ("user_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (118.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (8.8ms)[0m  [1m[35mALTER TABLE "books" ADD CONSTRAINT "fk_rails_ff77da0e36"
+FOREIGN KEY ("cat_id")
+  REFERENCES "cats" ("id")
+[0m
+  [1m[35m (9.9ms)[0m  [1m[35mALTER TABLE "measurements" ADD CONSTRAINT "fk_rails_85b1ddff32"
+FOREIGN KEY ("book_id")
+  REFERENCES "books" ("id")
+[0m
+  [1m[35m (8.8ms)[0m  [1m[35mALTER TABLE "measurements" ADD CONSTRAINT "fk_rails_b199c8b9fc"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (107.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (4.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211101084329)[0m
+  [1m[35m (10.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20211021200309),
+(20211101084013),
+(20211101084151);
+
+[0m
+  [1m[35m (108.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-12-04 08:54:44.076631"], ["updated_at", "2021-12-04 08:54:44.076631"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "fe2de2693bdae364e4b5945df980a99714ab229a"], ["created_at", "2021-12-04 08:54:44.093951"], ["updated_at", "2021-12-04 08:54:44.093951"]]
+  [1m[36mTRANSACTION (31.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "books" CASCADE[0m
+  [1m[35m (116.6ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "name" character varying, "author" character varying, "isbn" character varying, "number_of_pages" character varying, "cat_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (63.4ms)[0m  [1m[35mCREATE INDEX "index_books_on_cat_id" ON "books" ("cat_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "cats" CASCADE[0m
+  [1m[35m (105.7ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "measurements" CASCADE[0m
+  [1m[35m (138.5ms)[0m  [1m[35mCREATE TABLE "measurements" ("id" bigserial primary key, "pages_read" integer, "percent_left" character varying, "user_id" bigint NOT NULL, "book_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (51.2ms)[0m  [1m[35mCREATE INDEX "index_measurements_on_book_id" ON "measurements" ("book_id")[0m
+  [1m[35m (65.3ms)[0m  [1m[35mCREATE INDEX "index_measurements_on_user_id" ON "measurements" ("user_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (115.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (6.8ms)[0m  [1m[35mALTER TABLE "books" ADD CONSTRAINT "fk_rails_ff77da0e36"
+FOREIGN KEY ("cat_id")
+  REFERENCES "cats" ("id")
+[0m
+  [1m[35m (7.3ms)[0m  [1m[35mALTER TABLE "measurements" ADD CONSTRAINT "fk_rails_85b1ddff32"
+FOREIGN KEY ("book_id")
+  REFERENCES "books" ("id")
+[0m
+  [1m[35m (8.4ms)[0m  [1m[35mALTER TABLE "measurements" ADD CONSTRAINT "fk_rails_b199c8b9fc"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (106.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211101084329)[0m
+  [1m[35m (10.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20211021200309),
+(20211101084013),
+(20211101084151);
+
+[0m
+  [1m[35m (108.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-12-04 08:54:45.126447"], ["updated_at", "2021-12-04 08:54:45.126447"]]
+  [1m[36mTRANSACTION (11.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-12-04 08:54:45.148706"], ["key", "environment"]]
+  [1m[36mTRANSACTION (10.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "fe2de2693bdae364e4b5945df980a99714ab229a"], ["created_at", "2021-12-04 08:54:45.170155"], ["updated_at", "2021-12-04 08:54:45.170155"]]
+  [1m[36mTRANSACTION (12.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCat Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cats" WHERE "cats"."name" = $1 LIMIT $2[0m  [["name", "fiction"], ["LIMIT", 1]]
+  [1m[36mCat Create (0.7ms)[0m  [1m[32mINSERT INTO "cats" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "fiction"], ["created_at", "2021-12-04 08:54:45.255819"], ["updated_at", "2021-12-04 08:54:45.255819"]]
+  [1m[36mTRANSACTION (17.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCat Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "cats" WHERE "cats"."name" = $1 LIMIT $2[0m  [["name", "classics"], ["LIMIT", 1]]
+  [1m[36mCat Create (0.7ms)[0m  [1m[32mINSERT INTO "cats" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "classics"], ["created_at", "2021-12-04 08:54:45.285756"], ["updated_at", "2021-12-04 08:54:45.285756"]]
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/signup" for 127.0.0.1 at 2021-12-04 10:04:18 +0100
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"che", "email"=>"1@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"che", "email"=>"1@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "che"], ["email", "1@1"], ["password_digest", "$2a$12$k8oVxICAqgkIXOS.yYYDVOOA2cURbS38T.P9V4h0sMF3d9fRDmxru"], ["created_at", "2021-12-04 09:04:19.445331"], ["updated_at", "2021-12-04 09:04:19.445331"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (23.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 1270ms (Views: 0.7ms | ActiveRecord: 35.3ms | Allocations: 9725)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-12-04 10:04:20 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"1@1", "password"=>"[FILTERED]", "authentication"=>{"email"=>"1@1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:7:in `authenticate'
+Completed 200 OK in 631ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 1592)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-04 10:04:21 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 34ms (Views: 7.5ms | ActiveRecord: 5.0ms | Allocations: 3942)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-12-04 10:06:33 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"nsoh", "email"=>"2@1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"nsoh", "email"=>"2@1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "2@1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "nsoh"], ["email", "2@1"], ["password_digest", "$2a$12$IyQ.u6oTVHx/zJuoHZOiieTjiYeepOaTGaiVXIMLKcOSXgAr531XS"], ["created_at", "2021-12-04 09:06:34.041641"], ["updated_at", "2021-12-04 09:06:34.041641"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (9.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "2@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "2@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 969ms (Views: 0.2ms | ActiveRecord: 11.7ms | Allocations: 3564)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-12-04 10:06:34 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"2@1", "password"=>"[FILTERED]", "authentication"=>{"email"=>"2@1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "2@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "2@1"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "2@1"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:7:in `authenticate'
+Completed 200 OK in 623ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1564)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-04 10:06:35 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.8ms | Allocations: 1288)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-12-04 10:48:05 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"author"=>"che", "isbn"=>"123", "cat_id"=>2, "cat"=>{}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameters: :author, :isbn, :cat_id, :cat[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+  [1m[36mCat Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "cats" WHERE "cats"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+Completed 200 OK in 208ms (Views: 0.1ms | ActiveRecord: 11.2ms | Allocations: 6249)
+
+
+Started POST "/cats" for 127.0.0.1 at 2021-12-04 10:50:17 +0100
+Processing by V1::CatsController#create as HTML
+  Parameters: {"author"=>"hyu", "isbn"=>"123", "cat_id"=>2, "cat"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameters: :author, :isbn, :cat_id, :cat[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+  [1m[36mCat Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "cats" WHERE "cats"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/cats_controller.rb:10:in `create'
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 2829)
+
+
+Started POST "/cats/2/books" for 127.0.0.1 at 2021-12-04 10:54:20 +0100
+Processing by V1::BooksController#create as HTML
+  Parameters: {"author"=>"hyu", "isbn"=>"123", "cat_id"=>"2", "book"=>{"author"=>"hyu", "isbn"=>"123", "cat_id"=>"2"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :book[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+Completed 422 Unprocessable Entity in 225ms (Views: 1.4ms | ActiveRecord: 12.0ms | Allocations: 7984)
+
+
+Started POST "/cats/2/books" for 127.0.0.1 at 2021-12-04 11:02:19 +0100
+Processing by V1::BooksController#create as HTML
+  Parameters: {"author"=>"hyu", "isbn"=>"123", "cat_id"=>"2", "book"=>{"author"=>"hyu", "isbn"=>"123", "cat_id"=>"2"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :book[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+Completed 422 Unprocessable Entity in 37ms (Views: 0.2ms | ActiveRecord: 8.0ms | Allocations: 12126)
+
+
+Started POST "/cats/1/books" for 127.0.0.1 at 2021-12-04 11:02:39 +0100
+Processing by V1::BooksController#create as HTML
+  Parameters: {"author"=>"hyu", "isbn"=>"23", "cat_id"=>"1", "book"=>{"author"=>"hyu", "isbn"=>"23", "cat_id"=>"1"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :book[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+Completed 422 Unprocessable Entity in 14ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 3524)
+
+
+Started POST "/cats/2/books" for 127.0.0.1 at 2021-12-04 11:05:38 +0100
+Processing by V1::BooksController#create as HTML
+  Parameters: {"author"=>"sddg", "isbn"=>"1234", "cat_id"=>"2", "book"=>{"author"=>"sddg", "isbn"=>"1234", "cat_id"=>"2"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :book[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+Completed 422 Unprocessable Entity in 10ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 3498)
+
+
+Started POST "/cats/2/books" for 127.0.0.1 at 2021-12-04 11:15:16 +0100
+Processing by V1::BooksController#create as HTML
+  Parameters: {"author"=>"sddg", "isbn"=>"1234", "cat_id"=>"2", "book"=>{"author"=>"sddg", "isbn"=>"1234", "cat_id"=>"2"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 5.6ms | Allocations: 6996)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'book' for Book.):
+  
+app/controllers/v1/books_controller.rb:4:in `create'
+Started POST "/cats/1/books" for 127.0.0.1 at 2021-12-04 11:33:37 +0100
+Processing by V1::BooksController#create as HTML
+  Parameters: {"author"=>"rggg", "isbn"=>"45", "cat_id"=>"1", "book"=>{"author"=>"rggg", "isbn"=>"45", "cat_id"=>"1"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :isbn[0m
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 7.4ms | Allocations: 7054)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'book' for Book.):
+  
+app/controllers/v1/books_controller.rb:4:in `create'
+Started POST "/cats/1/books" for 127.0.0.1 at 2021-12-04 11:34:06 +0100
+Processing by V1::BooksController#create as HTML
+  Parameters: {"author"=>"rggg", "isbn"=>"45", "cat_id"=>"1", "book"=>{"author"=>"rggg", "isbn"=>"45", "cat_id"=>"1"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 15.6ms | Allocations: 7221)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'book' for Book.):
+  
+app/controllers/v1/books_controller.rb:4:in `create'
+Started POST "/cats/1/books" for 127.0.0.1 at 2021-12-04 11:35:08 +0100
+Processing by V1::BooksController#create as HTML
+  Parameters: {"author"=>"rggg", "isbn"=>"45", "cat_id"=>"1", "book"=>{"author"=>"rggg", "isbn"=>"45", "cat_id"=>"1"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :book[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+Completed 422 Unprocessable Entity in 53ms (Views: 0.2ms | ActiveRecord: 21.1ms | Allocations: 12567)
+
+
+Started POST "/cats/1/books" for 127.0.0.1 at 2021-12-04 11:35:35 +0100
+Processing by V1::BooksController#create as HTML
+  Parameters: {"author"=>"rggg", "isbn"=>"45", "cat_id"=>"1", "book"=>{"author"=>"rggg", "isbn"=>"45", "cat_id"=>"1"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 11.5ms | Allocations: 7217)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'book' for Book.):
+  
+app/controllers/v1/books_controller.rb:4:in `create'
+Started POST "/cats/:1/books" for 127.0.0.1 at 2021-12-04 11:46:44 +0100
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by V1::BooksController#create as HTML
+  Parameters: {"author"=>"rggg", "isbn"=>"45", "cat_id"=>":1", "book"=>{"author"=>"rggg", "isbn"=>"45", "cat_id"=>":1"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :book[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+Completed 422 Unprocessable Entity in 218ms (Views: 0.3ms | ActiveRecord: 17.3ms | Allocations: 17875)
+
+
+Started POST "/cats/1/books" for 127.0.0.1 at 2021-12-05 11:57:24 +0100
+Processing by V1::BooksController#create as HTML
+  Parameters: {"author"=>"rggg", "isbn"=>"45", "cat_id"=>"1", "book"=>{"author"=>"rggg", "isbn"=>"45", "cat_id"=>"1"}}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.4ms | Allocations: 176)
+
+
+Started POST "/cats/1/books" for 127.0.0.1 at 2021-12-05 11:59:40 +0100
+Processing by V1::BooksController#create as HTML
+  Parameters: {"headers"=>{"Authorization"=>"Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Mzg2OTUxOTV9.l11bi8_Rf-4YmciPI0ryhQRxglbFTI30imsvzInUv18"}, "cat_id"=>"1", "book"=>{}}
+Completed 422 Unprocessable Entity in 1459ms (Views: 0.3ms | Allocations: 1440)
+
+
+Started POST "/cats/1/books" for 127.0.0.1 at 2021-12-05 12:00:30 +0100
+Processing by V1::BooksController#create as HTML
+  Parameters: {"headers"=>{"Authorization"=>"Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Mzg2OTUxOTV9.l11bi8_Rf-4YmciPI0ryhQRxglbFTI30imsvzInUv18"}, "cat_id"=>"1", "book"=>{}}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | Allocations: 86)
+
+
+Started POST "/cats/1/books" for 127.0.0.1 at 2021-12-05 12:02:33 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by V1::BooksController#create as HTML
+  Parameters: {"headers"=>{"Authorization"=>"Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Mzg2OTUxOTV9.l11bi8_Rf-4YmciPI0ryhQRxglbFTI30imsvzInUv18"}, "cat_id"=>"1", "book"=>{}}
+Completed 422 Unprocessable Entity in 33ms (Views: 0.3ms | ActiveRecord: 4.6ms | Allocations: 390)
+
+
+Started POST "/signup" for ::1 at 2021-12-05 13:28:05 +0100
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"chensoh", "email"=>"11@11.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (204.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "11@11.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (14.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "chensoh"], ["email", "11@11.com"], ["password_digest", "$2a$12$ym5SJnBjxafp2D2O2Nv.P.endIx9bgyh4zmwGkBXmM4yOGTpIFbPa"], ["created_at", "2021-12-05 12:28:07.564956"], ["updated_at", "2021-12-05 12:28:07.564956"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (42.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "11@11.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "11@11.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 2571ms (Views: 0.3ms | ActiveRecord: 442.7ms | Allocations: 12347)
+
+
+Started POST "/cats/1/books" for ::1 at 2021-12-05 13:32:08 +0100
+Processing by V1::BooksController#create as */*
+  Parameters: {"name"=>"chensoh", "author"=>"nsoh", "isbn"=>"123", "number_of_pages"=>"100", "cat_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mBook Create (601.1ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "isbn", "number_of_pages", "cat_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "chensoh"], ["author", "nsoh"], ["isbn", "123"], ["number_of_pages", "100"], ["cat_id", 1], ["created_at", "2021-12-05 12:32:09.585996"], ["updated_at", "2021-12-05 12:32:09.585996"]]
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (577.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+Completed 201 Created in 2640ms (Views: 0.9ms | ActiveRecord: 1188.0ms | Allocations: 11470)
+
+
+Started POST "/cats/1/books" for 127.0.0.1 at 2021-12-05 13:36:36 +0100
+Processing by V1::BooksController#create as HTML
+  Parameters: {"author"=>"me", "isbn"=>"45", "cat_id"=>"1", "book"=>{"author"=>"me", "isbn"=>"45", "cat_id"=>"1"}}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 176)
+
+
+Started POST "/cats/1/books" for 127.0.0.1 at 2021-12-05 13:49:29 +0100
+Processing by V1::BooksController#create as JSON
+  Parameters: {"author"=>"me", "isbn"=>"45", "cat_id"=>"1", "book"=>{"author"=>"me", "isbn"=>"45", "cat_id"=>"1"}}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.3ms | Allocations: 179)
+
+
+Started POST "/signup" for 127.0.0.1 at 2021-12-05 13:51:27 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"nsoh", "email"=>"soh@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"nsoh", "email"=>"soh@gmail.com"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (15.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "soh@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "nsoh"], ["email", "soh@gmail.com"], ["password_digest", "$2a$12$5G6KRriyb.NXIph3No9FVeLU/ew1D6350m.FN1.67WfMrVyYxxakm"], ["created_at", "2021-12-05 12:51:28.950144"], ["updated_at", "2021-12-05 12:51:28.950144"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (44.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "soh@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "soh@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 2007ms (Views: 0.3ms | ActiveRecord: 210.9ms | Allocations: 5651)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2021-12-05 13:51:29 +0100
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"soh@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"soh@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "soh@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "soh@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "soh@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:7:in `authenticate'
+Completed 200 OK in 827ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 1592)
+
+
+Started GET "/cats" for 127.0.0.1 at 2021-12-05 13:51:32 +0100
+Processing by V1::CatsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mCat Load (0.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 15ms (Views: 5.1ms | ActiveRecord: 1.6ms | Allocations: 1309)
+
+
+Started POST "/cats/1/books" for 127.0.0.1 at 2021-12-05 13:52:37 +0100
+Processing by V1::BooksController#create as JSON
+  Parameters: {"author"=>"me", "isbn"=>"4", "cat_id"=>"1", "book"=>{"author"=>"me", "isbn"=>"4", "cat_id"=>"1"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :book[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+Completed 422 Unprocessable Entity in 431ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 4757)
+
+
+Started POST "/cats/1/books" for 127.0.0.1 at 2021-12-05 13:54:28 +0100
+Processing by V1::BooksController#create as JSON
+  Parameters: {"author"=>"rggg", "isbn"=>"23", "cat_id"=>"1", "book"=>{"author"=>"rggg", "isbn"=>"23", "cat_id"=>"1"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :book[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+Completed 422 Unprocessable Entity in 25ms (Views: 0.3ms | ActiveRecord: 2.2ms | Allocations: 3516)
+
+
+Started POST "/cats/1/books" for 127.0.0.1 at 2021-12-05 13:57:49 +0100
+Processing by V1::BooksController#create as JSON
+  Parameters: {"author"=>"rggg", "isbn"=>"23", "cat_id"=>"1", "book"=>{"author"=>"rggg", "isbn"=>"23", "cat_id"=>"1"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :book[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+Completed 422 Unprocessable Entity in 34ms (Views: 0.2ms | ActiveRecord: 2.0ms | Allocations: 3514)
+
+
+Started POST "/cats/1/books" for 127.0.0.1 at 2021-12-05 13:58:18 +0100
+Processing by V1::BooksController#create as JSON
+  Parameters: {"author"=>"rggg", "isbn"=>"23", "number_of_pages"=>"123", "cat_id"=>"1", "book"=>{"author"=>"rggg", "isbn"=>"23", "number_of_pages"=>"123", "cat_id"=>"1"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :book[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mCat Load (1.0ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+Completed 422 Unprocessable Entity in 36ms (Views: 0.2ms | ActiveRecord: 2.0ms | Allocations: 3068)
+
+
+Started POST "/cats/1/books" for 127.0.0.1 at 2021-12-05 14:02:23 +0100
+Processing by V1::BooksController#create as JSON
+  Parameters: {"name"=>"hvvjhbk", "author"=>"sffdgg", "isbn"=>"34", "number_of_pages"=>"234", "cat_id"=>"1", "book"=>{"name"=>"hvvjhbk", "author"=>"sffdgg", "isbn"=>"34", "number_of_pages"=>"234", "cat_id"=>"1"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :book[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mBook Create (2.8ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "isbn", "number_of_pages", "cat_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "hvvjhbk"], ["author", "sffdgg"], ["isbn", "34"], ["number_of_pages", "234"], ["cat_id", 1], ["created_at", "2021-12-05 13:02:23.623677"], ["updated_at", "2021-12-05 13:02:23.623677"]]
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (17.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+Completed 201 Created in 100ms (Views: 0.7ms | ActiveRecord: 22.1ms | Allocations: 3289)
+
+
+Started POST "/cats/1/books" for 127.0.0.1 at 2021-12-05 14:32:48 +0100
+Processing by V1::BooksController#create as JSON
+  Parameters: {"name"=>"che", "author"=>"soh", "isbn"=>"345", "number_of_pages"=>"234", "cat_id"=>"1", "book"=>{"name"=>"che", "author"=>"soh", "isbn"=>"345", "number_of_pages"=>"234", "cat_id"=>"1"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+[31mUnpermitted parameter: :book[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mCat Load (1.0ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mBook Create (1.6ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "isbn", "number_of_pages", "cat_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "che"], ["author", "soh"], ["isbn", "345"], ["number_of_pages", "234"], ["cat_id", 1], ["created_at", "2021-12-05 13:32:49.078127"], ["updated_at", "2021-12-05 13:32:49.078127"]]
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (16.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+Completed 201 Created in 221ms (Views: 1.5ms | ActiveRecord: 108.5ms | Allocations: 5364)
+
+
+Started POST "/cats/1/books" for 127.0.0.1 at 2021-12-05 19:37:19 +0100
+  
+NoMethodError (undefined method `protect_from_forgery' for ApplicationController:Class):
+  
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/v1/books_controller.rb:2:in `<module:V1>'
+app/controllers/v1/books_controller.rb:1:in `<main>'
+Started POST "/cats/1/books" for 127.0.0.1 at 2021-12-06 06:35:35 +0100
+  [1m[35m (16.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by V1::BooksController#create as JSON
+  Parameters: {"name"=>"che", "author"=>"soh", "isbn"=>"345", "number_of_pages"=>"234", "cat_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:18:in `user'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mCat Load (1.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mBook Create (14.6ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "isbn", "number_of_pages", "cat_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "che"], ["author", "soh"], ["isbn", "345"], ["number_of_pages", "234"], ["cat_id", 1], ["created_at", "2021-12-06 05:35:37.448104"], ["updated_at", "2021-12-06 05:35:37.448104"]]
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (41.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/books_controller.rb:4:in `create'
+Completed 201 Created in 584ms (Views: 1.0ms | ActiveRecord: 249.4ms | Allocations: 19105)
+
+
