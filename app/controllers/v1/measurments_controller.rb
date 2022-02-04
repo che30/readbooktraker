@@ -1,7 +1,7 @@
 module V1
   class MeasurmentsController < ApplicationController
     def index
-      @measurements = current_user.measurements
+      @measurements = current_user.measurements.includes(:book)
       json_response(@measurements)
     end
 
@@ -18,7 +18,7 @@ module V1
     private
 
     def measurement_params
-      params.permit(:pages_read, :book_id)
+      params.permit(:pages_read, :book_id,:user_id,:date)
     end
   end
 end
