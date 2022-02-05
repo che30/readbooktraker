@@ -21,9 +21,11 @@ ActiveRecord::Schema.define(version: 2021_12_24_074615) do
     t.string "isbn"
     t.string "number_of_pages"
     t.bigint "cat_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["cat_id"], name: "index_books_on_cat_id"
+    t.index ["user_id"], name: "index_books_on_user_id"
   end
 
   create_table "cats", force: :cascade do |t|
@@ -53,6 +55,7 @@ ActiveRecord::Schema.define(version: 2021_12_24_074615) do
   end
 
   add_foreign_key "books", "cats"
+  add_foreign_key "books", "users"
   add_foreign_key "measurements", "books"
   add_foreign_key "measurements", "users"
 end
