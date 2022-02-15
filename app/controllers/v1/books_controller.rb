@@ -1,7 +1,7 @@
 module V1
   class BooksController < ApplicationController
-    def allbooks
-      @books = Book.includes(:measurements)
+    def index
+      @books = current_user.books
       json_response(@books)
     end
     def create

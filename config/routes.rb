@@ -8,7 +8,6 @@ Rails.application.routes.draw do
       resources :books
     end
     resources :measurments
-   get 'allbooks', to: 'books#allbooks'
   end
   post 'signup', to: 'users#create'
   post 'auth/login', to: 'authentication#authenticate'
