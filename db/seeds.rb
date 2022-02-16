@@ -7,3 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Cat.create(name: 'fiction')
 Cat.create(name: 'classics')
+Cat.create(name: 'Comic')
+Cat.create(name: 'Fantasy')
