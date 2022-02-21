@@ -4,15 +4,14 @@ class AuthenticationController < ApplicationController
   def authenticate
     auth_token =
       AuthenticateUser.new(auth_params[:email], auth_params[:password]).call
-      user = User.find_by(email: params[:email]) 
-    json_response(auth_token: auth_token,email: user.email,id: user.id,username: user.username)
+    user = User.find_by(email: params[:email])
+    json_response(auth_token: auth_token, email: user.email, id: user.id, username: user.username)
   end
 
   private
 
   def auth_params
-    params.permit(:email,:password,
-      "authentication"=>[:email,:password]
-    )
+    params.permit(:email, :password,
+                  'authentication' => %i[email password])
   end
 end

@@ -18,7 +18,7 @@ module V1
     private
 
     def measurement_params
-      params.permit(:pages_read, :book_id,:user_id,:date)
+      params.permit(:pages_read, :book_id, :user_id, :date)
     end
   end
 end

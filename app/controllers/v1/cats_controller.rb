@@ -8,9 +8,9 @@ module V1
     def create
       @cat = Cat.new(cat_params)
       if @cat.save
-      json_response(@cat,:created)
-      else 
-        @errors = @cat.errors.full_messages.join(";")
+        json_response(@cat, :created)
+      else
+        @errors = @cat.errors.full_messages.join(';')
         json_response(@errors)
       end
     end
