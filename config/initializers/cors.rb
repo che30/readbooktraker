@@ -8,15 +8,16 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
     origins 'https://readbooktracker.herokuapp.com'
+
     resource '/auth/login',
       :headers => :any,
-      :methods => [:post, :options]
+      :methods => [:post]
     resource '/signup',
       headers: :any,
-      methods: [:post, :head, :options]
+      methods: [:post, :head]
     resource '/users/:user_id/books',
       headers: :any,
-      methods: [:get, :head, :options]
+      methods: [:get, :head]
     resource '/users/:user_id/books',
       headers: :any,
       methods: [:post, :head]
@@ -28,6 +29,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
       methods: [:get, :head]
     resource '/cats',
       headers: :any,
+      methods: [:get, :post, :put, :patch, :delete, :options, :head]
       methods: [:get, :head]
   end
 end

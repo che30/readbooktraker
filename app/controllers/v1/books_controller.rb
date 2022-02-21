@@ -1,7 +1,7 @@
 module V1
   class BooksController < ApplicationController
     def index
-      @books = current_user.books
+      @books = Book.all
       json_response(@books)
     end
     def create

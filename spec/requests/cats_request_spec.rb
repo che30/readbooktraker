@@ -8,9 +8,10 @@ RSpec.describe 'cats API', type: :request do
   describe 'GET /cats' do
     before do
       get '/cats',
-          headers: 'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo4LCJleHAiOjE2MzYwMzc1NDh9.0oHj4pPwdajhoh8rKgJ7TmyHBYhsLHOwhyfseMwlsIU'
+          headers: 'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDUyNTcxNDl9.mYzSDeg6nbOswRHlXR2RKAfYqYgabReDIKpnOhnv2wo'
     end
     it 'returns cats' do
+      puts json
       expect(json).not_to be_empty
       expect(json.size).to eq(10)
     end
