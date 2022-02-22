@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'https://readbooktracker.herokuapp.com'
+    origins 'https://read-book-tracker-front-end.herokuapp.com'
 
     resource '/auth/login',
       :headers => :any,
