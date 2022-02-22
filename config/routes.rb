@@ -1,6 +1,8 @@
-require 'api_version'
+
+  require 'api_constraints'
 Rails.application.routes.draw do
-  scope module: :v1, constraints: ApiVersion.new('v1', true) do
+namespace :api do
+  scope module: :v1, constraints: ApiConstraints.new(version: 1, default: true) do
     resources :users do
       resources :measurments
       resources :books
@@ -10,6 +12,7 @@ Rails.application.routes.draw do
     end
     resources :measurments
   end
+end 
   post 'signup', to: 'users#create'
   post 'auth/login', to: 'authentication#authenticate'
 
