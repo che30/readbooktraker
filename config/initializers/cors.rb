@@ -14,18 +14,18 @@ allow do
   resource '/signup',
     headers: :any,
     methods: [:post, :head]
-  resource '/users/:user_id/books',
+  resource '/api/users/:user_id/books',
     headers: :any,
     methods: [:get, :post, :options, :head]
-  resource '/users/:user_id/books',
+  resource '/api/users/:user_id/books',
     headers: :any,
     methods: [:get, :options, :head]
-  resource '/measurments',
+  resource '/api/measurments',
     headers: :any,methods: [:post, :options, :head]
-  resource '/users/:user_id/measurments',
+  resource '/api/users/:user_id/measurments',
     headers: :any,
     methods: [:get, :head]
-  resource '/cats',
+  resource '/api/cats',
     headers: :any,
     methods: [:get, :post, :put, :patch, :delete, :options, :head]
 end
