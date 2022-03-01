@@ -19,13 +19,13 @@ allow do
     methods: [:get, :options, :head]
   resource '/api/users/:user_id/books',
     headers: :any,
-    methods: [:get, :options, :head]
+    methods: [:post, :options, :head]
   resource '/api/user-measurements',
     headers: :any,
-    methods: [:post, :options, :head]
+    methods: [:get, :options, :head]
   resource '/api/users/user_id/books/book_id/measurements',
     headers: :any,
-    methods: [:get, :head]
+    methods: [:post, :head]
   resource '/api/categories',
     headers: :any,
     methods: [:get, :options, :head]
