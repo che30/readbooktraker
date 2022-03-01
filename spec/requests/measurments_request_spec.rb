@@ -2,10 +2,11 @@ require 'rails_helper'
 
 RSpec.describe 'Measurments', type: :request do
   let(:user) { create(:user) }
-  let(:cat) { Cat.create!(name: 'science fiction') }
+  let(:cat) { Category.create!(name: 'science fiction') }
   let(:book) do
     Book.create!(name: 'think grow rich',
-                 author: 'steve', isbn: '1267', number_of_pages: 20, cat_id: cat.id)
+                 author: 'steve', isbn: '1267', number_of_pages: 20,
+                  category_id: cat.id, user_id: user.id)
   end
   let!(:measurements) do
     create_list(:measurement, 10, pages_read: 10,
@@ -13,7 +14,7 @@ RSpec.describe 'Measurments', type: :request do
   end
   let(:measurement_id) { measurements.first.id }
   let(:headers) { valid_headers }
-  describe 'GET /measurements' do
+  describe 'GET /api/users/user_id/books/book_id/measurements' do
     before { get '/measurments', params: {}, headers: headers }
     it 'returns measurements' do
       expect(json).not_to be_empty
