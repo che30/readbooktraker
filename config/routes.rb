@@ -3,14 +3,13 @@ require 'api_constraints'
 Rails.application.routes.draw do
 namespace :api do
   scope module: :v1, constraints: ApiConstraints.new(version: 1, default: true) do
-    resources :users do
-      resources :measurments
-      resources :books
+    resources :users, only: [:create, :show] do
+      resources :books, only: [:create, :index] do
+        resources :measurements, only: [:create, :show]
+      end
     end
-    resources :cats do
-      resources :books
-    end
-    resources :measurments
+    resources :categories, only: [:create, :index]
+    get 'user-measurements', to: 'measurements#index'
   end
 end 
   post 'signup', to: 'users#create'

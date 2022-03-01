@@ -16,21 +16,21 @@ allow do
     methods: [:post, :head]
   resource '/api/users/:user_id/books',
     headers: :any,
-    methods: [:get, :post, :options, :head]
+    methods: [:get, :options, :head]
   resource '/api/users/:user_id/books',
     headers: :any,
     methods: [:get, :options, :head]
-  resource '/api/measurments',
-    headers: :any,methods: [:post, :options, :head]
-  resource '/api/users/:user_id/measurments',
+  resource '/api/user-measurements',
+    headers: :any,
+    methods: [:post, :options, :head]
+  resource '/api/users/user_id/books/book_id/measurements',
     headers: :any,
     methods: [:get, :head]
-  resource '/api/cats',
+  resource '/api/categories',
     headers: :any,
-    methods: [:get, :post, :put, :patch, :delete, :options, :head]
+    methods: [:get, :options, :head]
 end
 end
-# end
 # Rails.application.config.middleware.insert_before 0, Rack::Cors do
 #   allow do
 #     origins '*'
