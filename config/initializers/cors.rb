@@ -22,10 +22,10 @@ allow do
     methods: [:post, :options, :head]
   resource '/api/user-measurements',
     headers: :any,
-    methods: [:get, :options, :head]
+    methods: [:get, :options,:post, :head]
   resource '/api/users/user_id/books/book_id/measurements',
     headers: :any,
-    methods: [:post, :options, :head]
+    methods: [:post, :options, :head, :put, :patch]
   resource '/api/categories',
     headers: :any,
     methods: [:get, :options, :head]
