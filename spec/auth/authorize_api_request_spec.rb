@@ -1,5 +1,5 @@
+# rubocop:disable Metrics/BlockLength
 require 'rails_helper'
-
 RSpec.describe AuthorizeApiRequest do
   let(:user) { create(:user) }
   let(:header) { { 'Authorization' => token_generator(user.id) } }
@@ -19,7 +19,8 @@ RSpec.describe AuthorizeApiRequest do
        token' do
         it 'raises a MissingToken error' do
           expect { invalid_request_obj.call }
-            .to raise_error(ExceptionHandler::MissingToken, 'Missing token')
+            .to raise_error(ExceptionHandler::MissingToken,
+                            'Missing token')
         end
       end
 
@@ -62,3 +63,4 @@ RSpec.describe AuthorizeApiRequest do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength

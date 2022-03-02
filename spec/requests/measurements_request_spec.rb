@@ -4,20 +4,20 @@ require 'faker'
 RSpec.describe 'Measurments', type: :request do
   let(:user) { create(:user) }
   let(:cat) { Category.create!(name: 'science fiction') }
-  let(:book) do 
+  let(:book) do
     Book.create!(name: Faker::Name,
-                author: Faker::Name.name,
-                isbn: Faker::Number.number(digits: 4).to_s,
-                number_of_pages: Faker::Number.number(digits: 3),
-                category_id: cat.id,
-                user_id: user.id)
+                 author: Faker::Name.name,
+                 isbn: Faker::Number.number(digits: 4).to_s,
+                 number_of_pages: Faker::Number.number(digits: 3),
+                 category_id: cat.id,
+                 user_id: user.id)
   end
   let!(:measurements) do
-    create_list(:measurement, 10, 
-                  pages_read: 10,
-                  user_id: user.id,
-                  book_id: book.id,
-                  date: Date.today.to_s)
+    create_list(:measurement, 10,
+                pages_read: 10,
+                user_id: user.id,
+                book_id: book.id,
+                date: Date.today.to_s)
   end
   let(:measurement_id) { measurements.first.id }
   let(:headers) { valid_headers }
@@ -32,7 +32,7 @@ RSpec.describe 'Measurments', type: :request do
     let(:valid_attributes) do
       #       # send json payload
       { pages_read: 10, user_id: user.id,
-        book_id: book.id,date: Date.today.to_s }.to_json
+        book_id: book.id, date: Date.today.to_s }.to_json
     end
     context 'when request is valid' do
       before { post '/api/user-measurement', params: valid_attributes, headers: headers }

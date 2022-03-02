@@ -3,11 +3,13 @@ require 'faker'
 RSpec.describe 'Books', type: :request do
   let(:user) { create(:user) }
   let(:cat) { Category.create!(name: 'science fiction') }
-  let!(:books) {Book.create!(name: 'first book', 
-    author: Faker::Name.name, isbn: Faker::Lorem.characters(number: 4),
-    number_of_pages: Faker::Number.number(digits: 3),
-    category_id: cat.id,
-    user_id: user.id)}
+  let!(:books) do
+    Book.create!(name: 'first book',
+                 author: Faker::Name.name, isbn: Faker::Lorem.characters(number: 4),
+                 number_of_pages: Faker::Number.number(digits: 3),
+                 category_id: cat.id,
+                 user_id: user.id)
+  end
   let(:headers) { valid_headers }
   describe 'GET /api/users/1/books' do
     before { get "/api/users/#{user.id}/books", params: {}, headers: headers }
@@ -21,7 +23,7 @@ RSpec.describe 'Books', type: :request do
       { name: 'crown of thorns', user_id: user.id,
         category_id: cat.id, author: 'che nsoh',
         number_of_pages: 200,
-        isbn: Faker::Name.unique.name,  }.to_json
+        isbn: Faker::Name.unique.name }.to_json
     end
     context 'when request is valid' do
       before { post '/api/users/1/books', params: valid_attributes, headers: headers }
