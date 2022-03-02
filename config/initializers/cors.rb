@@ -23,9 +23,9 @@ allow do
   resource '/api/user-measurements',
     headers: :any,
     methods: [:get, :options,:post, :head]
-  resource '/api/users/user_id/books/book_id/measurements',
+  resource '/api/user-measurement',
     headers: :any,
-    methods: [:post, :options, :head, :put, :patch]
+    methods: [:post, :options, :head]
   resource '/api/categories',
     headers: :any,
     methods: [:get, :options, :head]

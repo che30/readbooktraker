@@ -10,6 +10,7 @@ namespace :api do
     end
     resources :categories, only: [:create, :index]
     get 'user-measurements', to: 'measurements#index'
+    post 'user-measurement', to: 'measurements#create'
   end
 end 
   post 'signup', to: 'users#create'
