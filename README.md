@@ -1,4 +1,4 @@
-# ROR-Capstone: Grouping Transactions
+# FINAL-CAPSTONE: READ-BOOK-TRACKER
 This project  is based on a mobile version first app to track books(electronic pages precisely the name) and progress in the pages read
 ## Basic Features and Usage:
 - 1. Sign up screen: A user can sign up with his name, email, password
