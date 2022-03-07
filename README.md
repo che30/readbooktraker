@@ -28,7 +28,7 @@ This project  is based on a mobile version first app to track books(electronic p
 - Ruby v2.7.2
 - Ruby on Rails v6.1.1
 - Rspec testing framework
-- Javascript(Es6)
+- Javascript(ES6)
 - React and Redux framework
 - Jest testing framework
 
