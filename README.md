@@ -20,6 +20,8 @@ This project  is based on a mobile version first app to track books(electronic p
 ![screenshot](app/images/tracker__newbook.png)
 ![screenshot](app/images/tracker__measurement.png)
 # Presentations
+##  VIDEO EXPLANATION
+[VIDEO DEMO Link](https://www.loom.com/share/edd3f3fc5c0845539a1bb682c20070cf)
 ##  Live Demo
 [Live Demo Link](https://read-book-tracker-front-end.herokuapp.com/)
 
